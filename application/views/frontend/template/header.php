@@ -9,29 +9,36 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">Blog do CodeIgniter</a>
+            <a class="navbar-brand" href="#">Scale Up</a>
         </div>
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-                <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Categorias <span class="caret"></span></a>
-                  <ul class="dropdown-menu">
-                    <li><a href="#">Categoria 1</a></li>
-                    <li><a href="#">Categoria 2</a></li>
-                    <li><a href="#">Categoria 3</a></li>
-                    <li><a href="#">Categoria 4</a></li>
-                  </ul>
-                </li>
-                <li>
-                    <a href="#">Sobre Nós</a>
-                </li>
-                <li>
-                    <a href="#">Contato</a>
-                </li>
+                  <li>
+                      <a href="#">HOME</a>
+                  </li>
+                  <li>
+                      <a href="#">SOBRE NÓS</a>
+                  </li>
+                  <li>
+                      <a href="#">SERVIÇOS</a>
+                  </li>
+                  <li>
+                      <a href="#">EQUIPE</a>
+                  </li>
+                  <li>
+                      <a href="#">CONTATO</a>
+                  </li>
+                  <li>
+                      <a href="#">MEJ</a>
+                  </li>
+                  <li>
+                      <a href="#">BLOG</a>
+                  </li>
             </ul>
         </div>
         <!-- /.navbar-collapse -->
     </div>
     <!-- /.container -->
 </nav>
+<!-- Navigation -->
