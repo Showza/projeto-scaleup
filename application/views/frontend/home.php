@@ -57,7 +57,7 @@
 <!-- Coluna de Missão, Visão e Valores -->
 <div class="container-fluid" style="background-color:#2E2E2E; height:350px;">
     <div class="row">
-        <!-- Coluna da Direita -->
+        <!-- Coluna da Esquerda -->
         <div class="col-sm-4" style="text-align:center;">
             <p style="height: 50px">
                 <h1><i class="fas fa-users fa-2x" style="color:#f2f2f2"></i></h1>
@@ -85,7 +85,7 @@
                 </font>
             </p>
         </div>
-        <!-- Coluna da Esquerda -->
+        <!-- Coluna da Direita -->
         <div class="col-sm-4" style="text-align:center;">
             <p style="height: 50px">
                 <h1><i class="far fa-gem fa-2x" style="color:#f2f2f2"></i></h1>
@@ -104,7 +104,7 @@
 <br>
 
 <!-- Coluna de Serviços -->
-<div class="container-fluid">
+<div class="container">
     <font face="monospace">
         <h1 style="font-size:300%;"><b>Nossos Serviços</b></h1> <!--Esta um pouco desalinhado -->
     </font>
@@ -112,7 +112,7 @@
 <br>
 <div class="container-fluid">
     <div class="row">
-    <!-- Coluna da Direita -->
+    <!-- Coluna da Esquerda -->
         <div class="col-sm-4">
             <img style="opacity:0.5; filter:alpha(opacity=50);" src="<?php echo base_url('assets/frontend/img/servico/servico1.jpg') ?>" alt="servico1" width="490px" height="380px">
             <div class="text" style="height: 50%">
@@ -123,7 +123,7 @@
                     </font>
                     <p>
                         <font face="monospace" color="#f2f2f2">
-                            <h4>Nesta sessão será descrito o <br/> serviço realizado</h4>
+                            <h4>Nesta sessão será descrito o serviço realizado</h4>
                         </font>
                     </p>
                 </p>
@@ -141,12 +141,12 @@
                 </p>
                 <p>
                     <font face="monospace" color="#f2f2f2">
-                        <h4>Nesta sessão será descrito o <br/> serviço realizado</h4>
+                        <h4>Nesta sessão será descrito o serviço realizado</h4>
                     </font>
                 </p>
             </div>
         </div>
-    <!-- Coluna da Esquerda -->
+    <!-- Coluna da Direita -->
         <div class="col-sm-4">
             <img style="opacity:0.5; filter:alpha(opacity=50);" src="<?php echo base_url('assets/frontend/img/servico/servico3.jpg') ?>" alt="servico3" width="490px" height="380px">
             <div class="text" style="height: 50%">
@@ -158,7 +158,7 @@
                 </p>
                 <p>
                     <font face="monospace" color="#f2f2f2">
-                        <h4>Nesta sessão será descrito o <br/> serviço realizado</h4>
+                        <h4>Nesta sessão será descrito o serviço realizado</h4>
                     </font>
                 </p>
             </div>
@@ -173,3 +173,128 @@
         <font face="monospace">Solicite um Orçamento</font>
     </button>
 </form>
+<br>
+<!-- Equipe -->
+<div class="container">
+    <font face="monospace">
+        <h1 style="font-size:300%;"><b>Equipe</b></h1> <!--Esta um pouco desalinhado -->
+    </font>
+</div>
+<br><br><br><br><br>
+<!-- As fotos estão desalinhadas com o texto e estão sem a borda -->
+<div class="container">
+    <div class="row">
+    <!-- Coluna da Esquerda -->
+    <div class="col-sm-4" style="text-align:center;">
+        <div class="hex" style="background-image: url(assets/frontend/img/pessoal/pessoal1.jpg);">
+        	<a href="#"></a>
+        	<div class="corner-1"></div>
+        	<div class="corner-2"></div>
+        </div>
+        <p style="height: 300px">
+            <font face="monospace">
+                <h1 style="font-size:250%">Nome e sobrenome</h1>
+            </font>
+        </p>
+        <p>
+            <font face="monospace" color="#9aff01">
+                <h4 style="font-size:150%"><b>Cargo ou função</b></h4>
+            </font>
+        </p>
+    </div>
+<!-- Coluna do Meio -->
+    <div class="col-sm-4" style="text-align:center;">
+        <div class="hex" style="background-image: url(assets/frontend/img/pessoal/pessoal2.jpg);">
+        	<a href="#"></a>
+        	<div class="corner-1"></div>
+        	<div class="corner-2"></div>
+        </div>
+        <p style="height: 300px">
+            <font face="monospace">
+                <h1 style="font-size:250%">Nome e sobrenome</h1>
+            </font>
+        </p>
+        <p>
+            <font face="monospace" color="#9aff01">
+                <h4 style="font-size:150%"><b>Cargo ou função</b></h4>
+            </font>
+        </p>
+    </div>
+<!-- Coluna da Direita -->
+    <div class="col-sm-4" style="text-align:center;">
+        <div class="hex" style="background-image: url(assets/frontend/img/pessoal/pessoal3.jpg);">
+        	<a href="#"></a>
+        	<div class="corner-1"></div>
+        	<div class="corner-2"></div>
+        </div>
+        <p style="height: 300px">
+            <font face="monospace">
+                <h1 style="font-size:250%">Nome e sobrenome</h1>
+            </font>
+        </p>
+        <p>
+            <font face="monospace" color="#9aff01">
+                <h4 style="font-size:150%"><b>Cargo ou função</b></h4>
+            </font>
+        </p>
+    </div>
+</div>
+<br><br><br><br><br>
+<div class="container">
+    <div class="row">
+    <!-- Coluna da Esquerda -->
+    <div class="col-sm-4" style="text-align:center;">
+        <div class="hex" style="background-image: url(assets/frontend/img/pessoal/pessoal4.jpg);">
+        	<a href="#"></a>
+        	<div class="corner-1"></div>
+        	<div class="corner-2"></div>
+        </div>
+        <p style="height: 300px">
+            <font face="monospace">
+                <h1 style="font-size:250%">Nome e sobrenome</h1>
+            </font>
+        </p>
+        <p>
+            <font face="monospace" color="#9aff01">
+                <h4 style="font-size:150%"><b>Cargo ou função</b></h4>
+            </font>
+        </p>
+    </div>
+<!-- Coluna do Meio -->
+    <div class="col-sm-4" style="text-align:center;">
+        <div class="hex" style="background-image: url(assets/frontend/img/pessoal/pessoal5.jpg);">
+        	<a href="#"></a>
+        	<div class="corner-1"></div>
+        	<div class="corner-2"></div>
+        </div>
+        <p style="height: 300px">
+            <font face="monospace">
+                <h1 style="font-size:250%">Nome e sobrenome</h1>
+            </font>
+        </p>
+        <p>
+            <font face="monospace" color="#9aff01">
+                <h4 style="font-size:150%"><b>Cargo ou função</b></h4>
+            </font>
+        </p>
+    </div>
+<!-- Coluna da Direita -->
+    <div class="col-sm-4" style="text-align:center;">
+        <div class="hex" style="background-image: url(assets/frontend/img/pessoal/pessoal6.jpg);">
+        	<a href="#"></a>
+        	<div class="corner-1"></div>
+        	<div class="corner-2"></div>
+        </div>
+        <p style="height: 300px">
+            <font face="monospace">
+                <h1 style="font-size:250%">Nome e sobrenome</h1>
+            </font>
+        </p>
+        <p>
+            <font face="monospace" color="#9aff01">
+                <h4 style="font-size:150%"><b>Cargo ou função</b></h4>
+            </font>
+        </p>
+    </div>
+</div>
+<br><br><br><br><br>
