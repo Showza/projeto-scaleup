@@ -104,7 +104,7 @@
 <br>
 
 <!-- Coluna de Serviços -->
-<div class="container">
+<div class="txt" style="margin-left:3em">
     <font face="monospace">
         <h1 style="font-size:300%;"><b>Nossos Serviços</b></h1> <!--Esta um pouco desalinhado -->
     </font>
@@ -113,8 +113,9 @@
 <div class="container-fluid">
     <div class="row">
     <!-- Coluna da Esquerda -->
-        <div class="col-sm-4">
-            <img style="opacity:0.5; filter:alpha(opacity=50);" src="<?php echo base_url('assets/frontend/img/servico/servico1.jpg') ?>" alt="servico1" width="490px" height="380px">
+        <div class="col-sm-4 container" style="opacity: 0.5; filter: alpha(opacity=50);
+        margin: auto 0.4%; width: 32.5%; height: 380px;
+        background-image: url('assets/frontend/img/servico/servico1.jpg'); background-size: 100% 100%;">
             <div class="text" style="height: 50%">
                 <p style="height: 30%">
                     <h1><i class="fas fa-flask fa-2x" style="color:#f2f2f2"></i></h1>
@@ -130,8 +131,9 @@
             </div>
         </div>
     <!-- Coluna do Meio -->
-        <div class="col-sm-4">
-            <img style="opacity:0.5; filter:alpha(opacity=50);" src="<?php echo base_url('assets/frontend/img/servico/servico2.jpg') ?>" alt="servico2" width="490px" height="380px">
+        <div class="col-sm-4 container" style="opacity: 0.5; filter: alpha(opacity=50);
+        margin: auto 0.4%; width: 32.5%; height: 380px;
+        background-image: url('assets/frontend/img/servico/servico2.jpg'); background-size: 100% 100%;">
             <div class="text" style="height: 50%">
                 <p style="height: 30%">
                     <h1><i class="fas fa-flask fa-2x" style="color:#f2f2f2"></i></h1>
@@ -147,8 +149,9 @@
             </div>
         </div>
     <!-- Coluna da Direita -->
-        <div class="col-sm-4">
-            <img style="opacity:0.5; filter:alpha(opacity=50);" src="<?php echo base_url('assets/frontend/img/servico/servico3.jpg') ?>" alt="servico3" width="490px" height="380px">
+        <div class="col-sm-4 container" style="opacity: 0.5; filter: alpha(opacity=50);
+        margin: auto 0.4%; width: 32.5%; height: 380px;
+        background-image: url('assets/frontend/img/servico/servico3.jpg'); background-size: 100% 100%;">
             <div class="text" style="height: 50%">
                 <p style="height: 30%">
                     <h1><i class="fas fa-flask fa-2x" style="color:#f2f2f2"></i></h1>
@@ -169,132 +172,159 @@
 <!-- Botão de Orçamento -->
 <form method="get" action="#" style="text-align:center; font-size:200%;">
     <!-- Falta estilizar o botão -->
-    <button type="submit">
-        <font face="monospace">Solicite um Orçamento</font>
+    <button type="submit" style="background-color:#d7ff9b; border-color:black; height:80px; width:450px">
+        <font face="monospace"><b>Solicite um Orçamento</b></font>
     </button>
 </form>
 <br>
 <!-- Equipe -->
-<div class="container">
-    <font face="monospace">
-        <h1 style="font-size:300%;"><b>Equipe</b></h1> <!--Esta um pouco desalinhado -->
-    </font>
+<div class="txt" style="margin-left:3em">
+        <font face="monospace">
+            <h1 style="font-size:300%;"><b>Equipe</b></h1> <!--Esta um pouco desalinhado -->
+        </font>
 </div>
 <br><br><br><br><br>
 <!-- As fotos estão desalinhadas com o texto e estão sem a borda -->
-<div class="container">
+<div class="container-fluid">
     <div class="row">
     <!-- Coluna da Esquerda -->
-    <div class="col-sm-4" style="text-align:center;">
-        <div class="hex" style="background-image: url(assets/frontend/img/pessoal/pessoal1.jpg);">
-        	<a href="#"></a>
-        	<div class="corner-1"></div>
-        	<div class="corner-2"></div>
+    <div class="col-sm-4">
+        <div class="hexagon" style="background-image: url(assets/frontend/img/pessoal/pessoal1.jpg);">
+          <div class="hexTop"></div>
+          <div class="hexBottom"></div>
         </div>
-        <p style="height: 300px">
+        <p>
             <font face="monospace">
-                <h1 style="font-size:250%">Nome e sobrenome</h1>
+                <h1 style="font-size:250%; text-align:center;">Nome e sobrenome</h1>
             </font>
         </p>
         <p>
             <font face="monospace" color="#9aff01">
-                <h4 style="font-size:150%"><b>Cargo ou função</b></h4>
+                <h4 style="font-size:150%; text-align:center;"><b>Cargo ou função</b></h4>
             </font>
         </p>
     </div>
 <!-- Coluna do Meio -->
-    <div class="col-sm-4" style="text-align:center;">
-        <div class="hex" style="background-image: url(assets/frontend/img/pessoal/pessoal2.jpg);">
-        	<a href="#"></a>
-        	<div class="corner-1"></div>
-        	<div class="corner-2"></div>
+    <div class="col-sm-4">
+        <div class="hexagon" style="background-image: url(assets/frontend/img/pessoal/pessoal2.jpg);">
+          <div class="hexTop"></div>
+          <div class="hexBottom"></div>
         </div>
-        <p style="height: 300px">
+        <p>
             <font face="monospace">
-                <h1 style="font-size:250%">Nome e sobrenome</h1>
+                <h1 style="font-size:250%; text-align:center;">Nome e sobrenome</h1>
             </font>
         </p>
         <p>
             <font face="monospace" color="#9aff01">
-                <h4 style="font-size:150%"><b>Cargo ou função</b></h4>
+                <h4 style="font-size:150%; text-align:center;"><b>Cargo ou função</b></h4>
             </font>
         </p>
     </div>
 <!-- Coluna da Direita -->
-    <div class="col-sm-4" style="text-align:center;">
-        <div class="hex" style="background-image: url(assets/frontend/img/pessoal/pessoal3.jpg);">
-        	<a href="#"></a>
-        	<div class="corner-1"></div>
-        	<div class="corner-2"></div>
+    <div class="col-sm-4">
+        <div class="hexagon" style="background-image: url(assets/frontend/img/pessoal/pessoal3.jpg);">
+          <div class="hexTop"></div>
+          <div class="hexBottom"></div>
         </div>
-        <p style="height: 300px">
+        <p>
             <font face="monospace">
-                <h1 style="font-size:250%">Nome e sobrenome</h1>
+                <h1 style="font-size:250%; text-align:center;">Nome e sobrenome</h1>
             </font>
         </p>
         <p>
             <font face="monospace" color="#9aff01">
-                <h4 style="font-size:150%"><b>Cargo ou função</b></h4>
+                <h4 style="font-size:150%; text-align:center;"><b>Cargo ou função</b></h4>
             </font>
         </p>
     </div>
 </div>
 <br><br><br><br><br>
-<div class="container">
+<div class="container-fluid">
     <div class="row">
-    <!-- Coluna da Esquerda -->
-    <div class="col-sm-4" style="text-align:center;">
-        <div class="hex" style="background-image: url(assets/frontend/img/pessoal/pessoal4.jpg);">
-        	<a href="#"></a>
-        	<div class="corner-1"></div>
-        	<div class="corner-2"></div>
+        <!-- Coluna da Esquerda -->
+        <div class="col-sm-4">
+            <div class="hexagon" style="background-image: url(assets/frontend/img/pessoal/pessoal4.jpg);">
+              <div class="hexTop"></div>
+              <div class="hexBottom"></div>
+            </div>
+            <p>
+                <font face="monospace">
+                    <h1 style="font-size:250%; text-align:center;">Nome e sobrenome</h1>
+                </font>
+            </p>
+            <p>
+                <font face="monospace" color="#9aff01">
+                    <h4 style="font-size:150%; text-align:center;"><b>Cargo ou função</b></h4>
+                </font>
+            </p>
         </div>
-        <p style="height: 300px">
-            <font face="monospace">
-                <h1 style="font-size:250%">Nome e sobrenome</h1>
-            </font>
-        </p>
-        <p>
-            <font face="monospace" color="#9aff01">
-                <h4 style="font-size:150%"><b>Cargo ou função</b></h4>
-            </font>
-        </p>
-    </div>
-<!-- Coluna do Meio -->
-    <div class="col-sm-4" style="text-align:center;">
-        <div class="hex" style="background-image: url(assets/frontend/img/pessoal/pessoal5.jpg);">
-        	<a href="#"></a>
-        	<div class="corner-1"></div>
-        	<div class="corner-2"></div>
+    <!-- Coluna do Meio -->
+        <div class="col-sm-4">
+            <div class="hexagon" style="background-image: url(assets/frontend/img/pessoal/pessoal5.jpg);">
+              <div class="hexTop"></div>
+              <div class="hexBottom"></div>
+            </div>
+            <p>
+                <font face="monospace">
+                    <h1 style="font-size:250%; text-align:center;">Nome e sobrenome</h1>
+                </font>
+            </p>
+            <p>
+                <font face="monospace" color="#9aff01">
+                    <h4 style="font-size:150%; text-align:center;"><b>Cargo ou função</b></h4>
+                </font>
+            </p>
         </div>
-        <p style="height: 300px">
-            <font face="monospace">
-                <h1 style="font-size:250%">Nome e sobrenome</h1>
-            </font>
-        </p>
-        <p>
-            <font face="monospace" color="#9aff01">
-                <h4 style="font-size:150%"><b>Cargo ou função</b></h4>
-            </font>
-        </p>
-    </div>
-<!-- Coluna da Direita -->
-    <div class="col-sm-4" style="text-align:center;">
-        <div class="hex" style="background-image: url(assets/frontend/img/pessoal/pessoal6.jpg);">
-        	<a href="#"></a>
-        	<div class="corner-1"></div>
-        	<div class="corner-2"></div>
+    <!-- Coluna da Direita -->
+        <div class="col-sm-4">
+            <div class="hexagon" style="background-image: url(assets/frontend/img/pessoal/pessoal6.jpg);">
+              <div class="hexTop"></div>
+              <div class="hexBottom"></div>
+            </div>
+            <p>
+                <font face="monospace">
+                    <h1 style="font-size:250%; text-align:center;">Nome e sobrenome</h1>
+                </font>
+            </p>
+            <p>
+                <font face="monospace" color="#9aff01">
+                    <h4 style="font-size:150%; text-align:center;"><b>Cargo ou função</b></h4>
+                </font>
+            </p>
         </div>
-        <p style="height: 300px">
-            <font face="monospace">
-                <h1 style="font-size:250%">Nome e sobrenome</h1>
-            </font>
-        </p>
-        <p>
-            <font face="monospace" color="#9aff01">
-                <h4 style="font-size:150%"><b>Cargo ou função</b></h4>
-            </font>
-        </p>
     </div>
 </div>
-<br><br><br><br><br>
+<br><br><br>
+<!-- MEJ -->
+<div class="txt" style="margin-left:3em">
+        <font face="monospace">
+            <h1 style="font-size:300%;"><b>Movimento Empresa Júnior - MEJ</b></h1> <!--Esta um pouco desalinhado -->
+        </font>
+</div>
+<br>
+<div class="container-fluid" style="opacity: 0.5; filter: alpha(opacity=50);
+-webkit-filter: grayscale(100%); filter: grayscale(100%); width: 100%; height: 900px;
+background-image: url('assets/frontend/img/mej.png'); background-size: 100% 100%;">
+    <div class="container-fluid" style="text-align:center;  text-shadow: 2px 2px 8px #000000;">
+        <br><br><br><br><br>
+        <i class="fas fa-hands-helping fa-9x" style="color:#f2f2f2;"></i>
+        <font face="monospace" color="#f2f2f2">
+        <br><br>
+        <h3>O MEJ tem como propósito a busca por um Brasil Empreendedor.
+        Trabalhamos todos os dias para formar pessoas comprometidas e capazes de
+        transformar o Brasil por meio da realização de mais e melhores projetos.
+        O movimento surgiu em 1967 na França e veio para o Brasil em 1988.</h3>
+        <br><br>
+        <span style="font-size:350%;"><b>Um pouco sobre o MEJ</b></span>
+        <span style="font-size:150%;"><b>(2016)</b></span>
+        <br><br>
+        <ul style="font-size:120%; text-align:left;">
+            <li style="font-size:150%; margin: 30px 5%">Cerca de 15.777 universitários passaram pelo MEJ! #SomosMuitos</li>
+            <li style="font-size:150%; margin: 30px 5%">65,7% das EJs eram de cluster 1 e realizaram cerca de 40% dos projetos da rede.</li>
+            <li style="font-size:150%; margin: 30px 5%">As Ejs de Alto Crescimento representam 75% de todos os projetos realizados, foram 3.662 projetos!</li>
+            <li style="font-size:150%; margin: 30px 5%">41,6% dos nossos projetos foram destinados para Micro e Pequenas Empresas!</li>
+        </ul>
+        </font>
+    </div>
+</div>
