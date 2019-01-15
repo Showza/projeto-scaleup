@@ -5,19 +5,19 @@
   <div class="mySlides">
     <img src="<?php echo base_url('assets/frontend/img/slider/slider1.jpg') ?>" style="width:100%">
     <font face="monospace"><div class="text">União, Sinergia e Paixão.</div></font>
-    <font face="monospace"><div class="subtext">Conheça nossa equipe.</div></font>
+    <font face="monospace"><div class="subtext"><a href="#" style="text-decoration:none; color: inherit;">Conheça nossa equipe.</a></div></font>
   </div>
 
   <div class="mySlides">
     <img src="<?php echo base_url('assets/frontend/img/slider/slider2.jpg') ?>" style="width:100%">
     <font face="monospace"><div class="text">Digite algo aqui!</div></font>
-    <font face="monospace"><div class="subtext">Mais um texto!</div></font>
+    <font face="monospace"><div class="subtext"><a href="#" style="text-decoration:none; color: inherit;">Mais um texto!</a></div></font>
   </div>
 
   <div class="mySlides">
     <img src="<?php echo base_url('assets/frontend/img/slider/slider3.jpg') ?>" style="width:100%">
     <font face="monospace"><div class="text">Escreva algo!</div></font>
-    <font face="monospace"><div class="subtext">Esvreva mais alguma coisa.</div></font>
+    <font face="monospace"><div class="subtext"><a href="#" style="text-decoration:none; color: inherit;">Esvreva mais alguma coisa.</a></div></font>
   </div>
 
   <!-- Next and previous buttons -->
