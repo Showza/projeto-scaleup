@@ -159,7 +159,6 @@
 <br>
 <!-- Botão de Orçamento -->
 <form method="get" action="#contato" style="text-align:center; font-size:200%;">
-    <!-- Falta estilizar o botão -->
     <button type="submit" style="background-color:#d7ff9b; border-color:black; height:80px; width:450px">
         <font face="monospace"><b>Solicite um Orçamento</b></font>
     </button>
