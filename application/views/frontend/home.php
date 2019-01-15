@@ -116,54 +116,42 @@
         <div class="col-sm-4 container" style="opacity: 0.5; filter: alpha(opacity=50);
         margin: auto 0.4%; width: 32.5%; height: 380px;
         background-image: url('assets/frontend/img/servico/servico1.jpg'); background-size: 100% 100%;">
-            <div class="text" style="height: 50%">
-                <p style="height: 30%">
-                    <h1><i class="fas fa-flask fa-2x" style="color:#f2f2f2"></i></h1>
-                    <font face="monospace" color="#f2f2f2">
-                        <h1 style="font-size:100%"><b>Serviço 1</b></h1>
-                    </font>
-                    <p>
-                        <font face="monospace" color="#f2f2f2">
-                            <h4>Nesta sessão será descrito o serviço realizado</h4>
-                        </font>
-                    </p>
-                </p>
+            <div class="text" style="height: 50%; margin: auto -3%">
+                <h1 style="color:#f2f2f2; font-size:200%;">&#x2B21;</h1>
+                <font face="monospace" color="#f2f2f2">
+                    <h1 style="font-size:100%"><b>Serviço 1</b></h1>
+                </font>
+                <font face="monospace" color="#f2f2f2">
+                    <h4>Nesta sessão será descrito o serviço realizado</h4>
+                </font>
             </div>
         </div>
     <!-- Coluna do Meio -->
         <div class="col-sm-4 container" style="opacity: 0.5; filter: alpha(opacity=50);
         margin: auto 0.4%; width: 32.5%; height: 380px;
         background-image: url('assets/frontend/img/servico/servico2.jpg'); background-size: 100% 100%;">
-            <div class="text" style="height: 50%">
-                <p style="height: 30%">
-                    <h1><i class="fas fa-flask fa-2x" style="color:#f2f2f2"></i></h1>
-                    <font face="monospace" color="#f2f2f2">
-                        <h1 style="font-size:100%"><b>Serviço 2</b></h1>
-                    </font>
-                </p>
-                <p>
-                    <font face="monospace" color="#f2f2f2">
-                        <h4>Nesta sessão será descrito o serviço realizado</h4>
-                    </font>
-                </p>
+            <div class="text" style="height: 50%; margin: auto -3%">
+                <h1 style="color:#f2f2f2; font-size:200%;">&#x2B21;</h1>
+                <font face="monospace" color="#f2f2f2">
+                    <h1 style="font-size:100%"><b>Serviço 2</b></h1>
+                </font>
+                <font face="monospace" color="#f2f2f2">
+                    <h4>Nesta sessão será descrito o serviço realizado</h4>
+                </font>
             </div>
         </div>
     <!-- Coluna da Direita -->
         <div class="col-sm-4 container" style="opacity: 0.5; filter: alpha(opacity=50);
         margin: auto 0.4%; width: 32.5%; height: 380px;
         background-image: url('assets/frontend/img/servico/servico3.jpg'); background-size: 100% 100%;">
-            <div class="text" style="height: 50%">
-                <p style="height: 30%">
-                    <h1><i class="fas fa-flask fa-2x" style="color:#f2f2f2"></i></h1>
-                    <font face="monospace" color="#f2f2f2">
-                        <h1 style="font-size:100%"><b>Serviço 3</b></h1>
-                    </font>
-                </p>
-                <p>
-                    <font face="monospace" color="#f2f2f2">
-                        <h4>Nesta sessão será descrito o serviço realizado</h4>
-                    </font>
-                </p>
+            <div class="text" style="height: 50%; margin: auto -3%">
+                <h1 style="color:#f2f2f2; font-size:200%;">&#x2B21;</h1>
+                <font face="monospace" color="#f2f2f2">
+                    <h1 style="font-size:100%"><b>Serviço 3</b></h1>
+                </font>
+                <font face="monospace" color="#f2f2f2">
+                    <h4>Nesta sessão será descrito o serviço realizado</h4>
+                </font>
             </div>
         </div>
     </div>
