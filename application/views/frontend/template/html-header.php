@@ -18,7 +18,7 @@
     <!-- Custom CSS -->
     <link href="<?php echo base_url('assets/frontend/css/blog.css') ?>" rel="stylesheet">
     <link href="<?php echo base_url('assets/frontend/css/slider.css') ?>" rel="stylesheet">
-    <link href="<?php echo base_url('assets/frontend/css/style.css') ?>" rel="stylesheet">
+    <link href="<?php echo base_url('assets/frontend/css/navbar.css') ?>" rel="stylesheet">
     <link href="<?php echo base_url('assets/frontend/css/hexagon.css') ?>" rel="stylesheet">
 
     <!-- Custom Fonts -->
@@ -33,4 +33,4 @@
     <![endif]-->
 
 </head>
-<body>
+<body style="overflow-x: hidden;">

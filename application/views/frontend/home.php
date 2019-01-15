@@ -1,5 +1,5 @@
 <!-- Slideshow container -->
-<div class="slideshow-container">
+<div class="slideshow-container" id="home">
 
   <!-- Full-width images with number and caption text -->
   <div class="mySlides">
@@ -21,8 +21,8 @@
   </div>
 
   <!-- Next and previous buttons -->
-  <a class="prev" onclick="plusSlides(-1)" style="font-size:300%;">&#10094;</a>
-  <a class="next" onclick="plusSlides(1)" style="font-size:300%;">&#10095;</a>
+  <a class="prev" onclick="plusSlides(-1)" style="font-size:300%; text-decoration:none; color: white;">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)" style="font-size:300%; text-decoration:none; color: white;">&#10095;</a>
 </div>
 <br>
 
@@ -34,7 +34,7 @@
 </div> -->
 
 <!-- Coluna Quem Somos -->
-<div class="container-fluid" style="background-color:#2E2E2E; height:250px;">
+<div class="container-fluid" style="background-color:#2E2E2E; height:250px;" id="sobrenos">
     <div class="row">
         <div class="col-sm-6" style="text-align:center;">
             <p style="height: 70px">
@@ -104,7 +104,7 @@
 <br>
 
 <!-- Coluna de Serviços -->
-<div class="txt" style="margin-left:3em">
+<div class="txt" style="margin-left:3em" id="servicos">
     <font face="monospace">
         <h1 style="font-size:300%;"><b>Nossos Serviços</b></h1> <!--Esta um pouco desalinhado -->
     </font>
@@ -170,7 +170,7 @@
 </div>
 <br>
 <!-- Botão de Orçamento -->
-<form method="get" action="#" style="text-align:center; font-size:200%;">
+<form method="get" action="#contato" style="text-align:center; font-size:200%;">
     <!-- Falta estilizar o botão -->
     <button type="submit" style="background-color:#d7ff9b; border-color:black; height:80px; width:450px">
         <font face="monospace"><b>Solicite um Orçamento</b></font>
@@ -178,7 +178,7 @@
 </form>
 <br>
 <!-- Equipe -->
-<div class="txt" style="margin-left:3em">
+<div class="txt" style="margin-left:3em" id="equipe">
         <font face="monospace">
             <h1 style="font-size:300%;"><b>Equipe</b></h1> <!--Esta um pouco desalinhado -->
         </font>
@@ -297,7 +297,7 @@
 </div>
 <br><br><br>
 <!-- MEJ -->
-<div class="txt" style="margin-left:3em">
+<div class="txt" style="margin-left:3em" id="mej">
         <font face="monospace">
             <h1 style="font-size:300%;"><b>Movimento Empresa Júnior - MEJ</b></h1> <!--Esta um pouco desalinhado -->
         </font>
@@ -305,8 +305,8 @@
 <br>
 <div class="container-fluid" style="opacity: 0.5; filter: alpha(opacity=50);
 -webkit-filter: grayscale(100%); filter: grayscale(100%); width: 100%; height: 900px;
-background-image: url('assets/frontend/img/mej.png'); background-size: 100% 100%;">
-    <div class="container-fluid" style="text-align:center;  text-shadow: 2px 2px 8px #000000;">
+background-image: url('assets/frontend/img/mej.jpg'); background-size: 100% 100%;">
+    <div class="container-fluid" style="text-align:center;  text-shadow: 3px 3px 8px #000000;">
         <br><br><br><br><br>
         <i class="fas fa-hands-helping fa-9x" style="color:#f2f2f2;"></i>
         <font face="monospace" color="#f2f2f2">
