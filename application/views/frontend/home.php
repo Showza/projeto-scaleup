@@ -1,22 +1,31 @@
 <!-- Slideshow container -->
 <div class="slideshow-container" id="home">
 
+    <style>
+        .fadeslide {
+            -webkit-animation-name: fade;
+            -webkit-animation-duration: 3s;
+            animation-name: fade;
+            animation-duration: 3s;
+        }
+    </style>
+
   <!-- Full-width images with number and caption text -->
-  <div class="mySlides">
+  <div class="mySlides fadeslide">
     <img src="<?php echo base_url('assets/frontend/img/slider/slider1.jpg') ?>" style="width:100%">
-    <font face="monospace"><div class="text">União, Sinergia e Paixão.</div></font>
+    <font face="monospace"><div class="text"><b>União, Sinergia e Paixão.</b></div></font>
     <font face="monospace"><div class="subtext"><a href="#" style="text-decoration:none; color: inherit;">Conheça nossa equipe.</a></div></font>
   </div>
 
-  <div class="mySlides">
+  <div class="mySlides fadeslide">
     <img src="<?php echo base_url('assets/frontend/img/slider/slider2.jpg') ?>" style="width:100%">
-    <font face="monospace"><div class="text">Digite algo aqui!</div></font>
+    <font face="monospace"><div class="text"><b>Digite algo aqui!</b></div></font>
     <font face="monospace"><div class="subtext"><a href="#" style="text-decoration:none; color: inherit;">Mais um texto!</a></div></font>
   </div>
 
-  <div class="mySlides">
+  <div class="mySlides fadeslide">
     <img src="<?php echo base_url('assets/frontend/img/slider/slider3.jpg') ?>" style="width:100%">
-    <font face="monospace"><div class="text">Escreva algo!</div></font>
+    <font face="monospace"><div class="text"><b>Escreva algo!</b></div></font>
     <font face="monospace"><div class="subtext"><a href="#" style="text-decoration:none; color: inherit;">Esvreva mais alguma coisa.</a></div></font>
   </div>
 
@@ -27,11 +36,11 @@
 <br>
 
 <!-- The dots/circles -->
-<!-- <div style="text-align:center">
+<div class="text" style="text-align:center; bottom: -40%;">
   <span class="dot" onclick="currentSlide(1)"></span>
   <span class="dot" onclick="currentSlide(2)"></span>
   <span class="dot" onclick="currentSlide(3)"></span>
-</div> -->
+</div>
 
 <!-- Coluna Quem Somos -->
 <div class="container-fluid" style="background-color:#2E2E2E; height:250px;" id="sobrenos">
