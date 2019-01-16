@@ -1,40 +1,49 @@
 <!-- Slideshow container -->
-<div class="slideshow-container">
+<div class="slideshow-container" id="home">
+
+    <style>
+        .fadeslide {
+            -webkit-animation-name: fade;
+            -webkit-animation-duration: 3s;
+            animation-name: fade;
+            animation-duration: 3s;
+        }
+    </style>
 
   <!-- Full-width images with number and caption text -->
-  <div class="mySlides">
+  <div class="mySlides fadeslide">
     <img src="<?php echo base_url('assets/frontend/img/slider/slider1.jpg') ?>" style="width:100%">
-    <font face="monospace"><div class="text">União, Sinergia e Paixão.</div></font>
-    <font face="monospace"><div class="subtext">Conheça nossa equipe.</div></font>
+    <font face="monospace"><div class="text"><b>União, Sinergia e Paixão.</b></div></font>
+    <font face="monospace"><div class="subtext"><a href="#" style="text-decoration:none; color: inherit;">Conheça nossa equipe.</a></div></font>
   </div>
 
-  <div class="mySlides">
+  <div class="mySlides fadeslide">
     <img src="<?php echo base_url('assets/frontend/img/slider/slider2.jpg') ?>" style="width:100%">
-    <font face="monospace"><div class="text">Digite algo aqui!</div></font>
-    <font face="monospace"><div class="subtext">Mais um texto!</div></font>
+    <font face="monospace"><div class="text"><b>Digite algo aqui!</b></div></font>
+    <font face="monospace"><div class="subtext"><a href="#" style="text-decoration:none; color: inherit;">Mais um texto!</a></div></font>
   </div>
 
-  <div class="mySlides">
+  <div class="mySlides fadeslide">
     <img src="<?php echo base_url('assets/frontend/img/slider/slider3.jpg') ?>" style="width:100%">
-    <font face="monospace"><div class="text">Escreva algo!</div></font>
-    <font face="monospace"><div class="subtext">Esvreva mais alguma coisa.</div></font>
+    <font face="monospace"><div class="text"><b>Escreva algo!</b></div></font>
+    <font face="monospace"><div class="subtext"><a href="#" style="text-decoration:none; color: inherit;">Esvreva mais alguma coisa.</a></div></font>
   </div>
 
   <!-- Next and previous buttons -->
-  <a class="prev" onclick="plusSlides(-1)" style="font-size:300%;">&#10094;</a>
-  <a class="next" onclick="plusSlides(1)" style="font-size:300%;">&#10095;</a>
+  <a class="prev" onclick="plusSlides(-1)" style="font-size:300%; text-decoration:none; color: white;">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)" style="font-size:300%; text-decoration:none; color: white;">&#10095;</a>
 </div>
 <br>
 
 <!-- The dots/circles -->
-<!-- <div style="text-align:center">
+<div class="text" style="text-align:center; bottom: -40%;">
   <span class="dot" onclick="currentSlide(1)"></span>
   <span class="dot" onclick="currentSlide(2)"></span>
   <span class="dot" onclick="currentSlide(3)"></span>
-</div> -->
+</div>
 
 <!-- Coluna Quem Somos -->
-<div class="container-fluid" style="background-color:#2E2E2E; height:250px;">
+<div class="container-fluid" style="background-color:#2E2E2E; height:250px;" id="sobrenos">
     <div class="row">
         <div class="col-sm-6" style="text-align:center;">
             <p style="height: 70px">
@@ -104,7 +113,7 @@
 <br>
 
 <!-- Coluna de Serviços -->
-<div class="txt" style="margin-left:3em">
+<div class="txt" style="margin-left:3em" id="servicos">
     <font face="monospace">
         <h1 style="font-size:300%;"><b>Nossos Serviços</b></h1> <!--Esta um pouco desalinhado -->
     </font>
@@ -116,69 +125,56 @@
         <div class="col-sm-4 container" style="opacity: 0.5; filter: alpha(opacity=50);
         margin: auto 0.4%; width: 32.5%; height: 380px;
         background-image: url('assets/frontend/img/servico/servico1.jpg'); background-size: 100% 100%;">
-            <div class="text" style="height: 50%">
-                <p style="height: 30%">
-                    <h1><i class="fas fa-flask fa-2x" style="color:#f2f2f2"></i></h1>
-                    <font face="monospace" color="#f2f2f2">
-                        <h1 style="font-size:100%"><b>Serviço 1</b></h1>
-                    </font>
-                    <p>
-                        <font face="monospace" color="#f2f2f2">
-                            <h4>Nesta sessão será descrito o serviço realizado</h4>
-                        </font>
-                    </p>
-                </p>
+            <div class="text" style="height: 50%; margin: auto -3%">
+                <h1 style="color:#f2f2f2; font-size:200%;">&#x2B21;</h1>
+                <font face="monospace" color="#f2f2f2">
+                    <h1 style="font-size:100%"><b>Serviço 1</b></h1>
+                </font>
+                <font face="monospace" color="#f2f2f2">
+                    <h4>Nesta sessão será descrito o serviço realizado</h4>
+                </font>
             </div>
         </div>
     <!-- Coluna do Meio -->
         <div class="col-sm-4 container" style="opacity: 0.5; filter: alpha(opacity=50);
         margin: auto 0.4%; width: 32.5%; height: 380px;
         background-image: url('assets/frontend/img/servico/servico2.jpg'); background-size: 100% 100%;">
-            <div class="text" style="height: 50%">
-                <p style="height: 30%">
-                    <h1><i class="fas fa-flask fa-2x" style="color:#f2f2f2"></i></h1>
-                    <font face="monospace" color="#f2f2f2">
-                        <h1 style="font-size:100%"><b>Serviço 2</b></h1>
-                    </font>
-                </p>
-                <p>
-                    <font face="monospace" color="#f2f2f2">
-                        <h4>Nesta sessão será descrito o serviço realizado</h4>
-                    </font>
-                </p>
+            <div class="text" style="height: 50%; margin: auto -3%">
+                <h1 style="color:#f2f2f2; font-size:200%;">&#x2B21;</h1>
+                <font face="monospace" color="#f2f2f2">
+                    <h1 style="font-size:100%"><b>Serviço 2</b></h1>
+                </font>
+                <font face="monospace" color="#f2f2f2">
+                    <h4>Nesta sessão será descrito o serviço realizado</h4>
+                </font>
             </div>
         </div>
     <!-- Coluna da Direita -->
         <div class="col-sm-4 container" style="opacity: 0.5; filter: alpha(opacity=50);
         margin: auto 0.4%; width: 32.5%; height: 380px;
         background-image: url('assets/frontend/img/servico/servico3.jpg'); background-size: 100% 100%;">
-            <div class="text" style="height: 50%">
-                <p style="height: 30%">
-                    <h1><i class="fas fa-flask fa-2x" style="color:#f2f2f2"></i></h1>
-                    <font face="monospace" color="#f2f2f2">
-                        <h1 style="font-size:100%"><b>Serviço 3</b></h1>
-                    </font>
-                </p>
-                <p>
-                    <font face="monospace" color="#f2f2f2">
-                        <h4>Nesta sessão será descrito o serviço realizado</h4>
-                    </font>
-                </p>
+            <div class="text" style="height: 50%; margin: auto -3%">
+                <h1 style="color:#f2f2f2; font-size:200%;">&#x2B21;</h1>
+                <font face="monospace" color="#f2f2f2">
+                    <h1 style="font-size:100%"><b>Serviço 3</b></h1>
+                </font>
+                <font face="monospace" color="#f2f2f2">
+                    <h4>Nesta sessão será descrito o serviço realizado</h4>
+                </font>
             </div>
         </div>
     </div>
 </div>
 <br>
 <!-- Botão de Orçamento -->
-<form method="get" action="#" style="text-align:center; font-size:200%;">
-    <!-- Falta estilizar o botão -->
+<form method="get" action="#contato" style="text-align:center; font-size:200%;">
     <button type="submit" style="background-color:#d7ff9b; border-color:black; height:80px; width:450px">
         <font face="monospace"><b>Solicite um Orçamento</b></font>
     </button>
 </form>
 <br>
 <!-- Equipe -->
-<div class="txt" style="margin-left:3em">
+<div class="txt" style="margin-left:3em" id="equipe">
         <font face="monospace">
             <h1 style="font-size:300%;"><b>Equipe</b></h1> <!--Esta um pouco desalinhado -->
         </font>
@@ -297,7 +293,7 @@
 </div>
 <br><br><br>
 <!-- MEJ -->
-<div class="txt" style="margin-left:3em">
+<div class="txt" style="margin-left:3em" id="mej">
         <font face="monospace">
             <h1 style="font-size:300%;"><b>Movimento Empresa Júnior - MEJ</b></h1> <!--Esta um pouco desalinhado -->
         </font>
@@ -305,8 +301,8 @@
 <br>
 <div class="container-fluid" style="opacity: 0.5; filter: alpha(opacity=50);
 -webkit-filter: grayscale(100%); filter: grayscale(100%); width: 100%; height: 900px;
-background-image: url('assets/frontend/img/mej.png'); background-size: 100% 100%;">
-    <div class="container-fluid" style="text-align:center;  text-shadow: 2px 2px 8px #000000;">
+background-image: url('assets/frontend/img/mej.jpg'); background-size: 100% 100%;">
+    <div class="container-fluid" style="text-align:center;  text-shadow: 3px 3px 8px #000000;">
         <br><br><br><br><br>
         <i class="fas fa-hands-helping fa-9x" style="color:#f2f2f2;"></i>
         <font face="monospace" color="#f2f2f2">
