@@ -1,44 +1,35 @@
-<!-- Navigation -->
-<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-    <div class="container">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                <span class="sr-only">Navegação</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="#">Scale Up</a>
+<div class="navbar-top">
+    <div class="container-fluid" style="background-color:#2E2E2E; height:60px;">
+        <br>
+        <div class="col-sm-2"  style="text-align:center;">
+        <font face="monospace" color="#f2f2f2">
+            <a href="https://www.facebook.com/ScaleUpJr/" target="_blank" style="font-size:120%; margin: auto 20%; text-decoration:none; color: inherit;">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://www.instagram.com/scaleupjr/" target="_blank" style="font-size:120%; text-decoration:none; color: inherit;">
+                <i class="fab fa-instagram"></i>
+            </a>
         </div>
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav">
-                  <li>
-                      <a href="#">HOME</a>
-                  </li>
-                  <li>
-                      <a href="#">SOBRE NÓS</a>
-                  </li>
-                  <li>
-                      <a href="#">SERVIÇOS</a>
-                  </li>
-                  <li>
-                      <a href="#">EQUIPE</a>
-                  </li>
-                  <li>
-                      <a href="#">CONTATO</a>
-                  </li>
-                  <li>
-                      <a href="#">MEJ</a>
-                  </li>
-                  <li>
-                      <a href="#">BLOG</a>
-                  </li>
-            </ul>
+        <div class="col-sm-10"  style="text-align:right;">
+            <span style="font-size:120%; margin: auto 1% auto 2%"><b><i class="fas fa-phone"></i></i></b></span>
+            <span style="font-size:120%;"><b>Fale Conosco: (31) 9 9196-6156</b></span>
+            <span style="font-size:120%; margin: auto 1% auto 2%"><b><i class="far fa-envelope"></i></b></span>
+            <span style="font-size:120%;"><b>E-mail: contato@scaleup.com.br</b></span>
+        </font>
         </div>
-        <!-- /.navbar-collapse -->
     </div>
-    <!-- /.container -->
-</nav>
-<!-- Navigation -->
+</div>
+<div class="navbar">
+    <div class="logo">
+        <a href="#home"><img src="assets/frontend/img/logo.png"></a>
+    </div>
+    <div class="menu">
+        <a href="#home">HOME</a>
+        <a href="#sobrenos">SOBRE NÓS</a>
+        <a href="#servicos">SERVIÇOS</a>
+        <a href="#equipe">EQUIPE</a>
+        <a href="#contato">CONTATO</a>
+        <a href="#mej">MEJ</a>
+        <a href="#">BLOG</a>
+    </div>
+</div>
