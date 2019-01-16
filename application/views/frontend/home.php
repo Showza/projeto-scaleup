@@ -1,4 +1,7 @@
 <!-- Slideshow container -->
+<div id="voltarTopo">
+	<a href="#" id="subir" style="text-decoration:none; color: #9aff01;"><i class="fas fa-arrow-circle-up fa-3x"></i></a>
+</div>
 <div class="slideshow-container" id="home">
 
     <style>
@@ -26,7 +29,7 @@
   <div class="mySlides fadeslide">
     <img src="<?php echo base_url('assets/frontend/img/slider/slider3.jpg') ?>" style="width:100%">
     <font face="monospace"><div class="text"><b>Escreva algo!</b></div></font>
-    <font face="monospace"><div class="subtext"><a href="#" style="text-decoration:none; color: inherit;">Esvreva mais alguma coisa.</a></div></font>
+    <font face="monospace"><div class="subtext"><a href="#" style="text-decoration:none; color: inherit;">Escreva mais alguma coisa.</a></div></font>
   </div>
 
   <!-- Next and previous buttons -->
