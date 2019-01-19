@@ -1,6 +1,6 @@
 <!-- Slideshow container -->
 <div id="voltarTopo">
-	<a href="#" id="subir" style="text-decoration:none; color: #9aff01;"><i class="fas fa-arrow-circle-up fa-3x"></i></a>
+	<a href="#" id="subir" style="text-decoration:none; color: #9aff01; z-index: 9999;"><i class="fas fa-arrow-circle-up fa-3x"></i></a>
 </div>
 <div class="slideshow-container" id="home">
 
@@ -11,6 +11,12 @@
             animation-name: fade;
             animation-duration: 3s;
         }
+		@media (max-width: 768px) {
+			.slideimg {
+				width:100% !important;
+				height:250px !important;
+			}
+		}
     </style>
 
   <!-- Full-width images with number and caption text -->
@@ -18,7 +24,7 @@
 	  foreach($slider as $slides){
 	?>
 	<div class="mySlides fadeslide">
-	<img src="<?php echo base_url('assets/frontend/img/slider/'.$slides->id.'.jpg') ?>" style="width:100%">
+	<img class="slideimg" src="<?php echo base_url('assets/frontend/img/slider/'.$slides->id.'.jpg') ?>" style="width:100%; height:850px;">
 	<font face="monospace"><div class="text"><b><?php echo $slides->titulo ?></b></div></font>
 	<font face="monospace"><div class="subtext">
 		<a href="<?php echo limpar($slides->link) ?>" style="text-decoration:none; color: inherit;">
@@ -30,20 +36,21 @@
 	}
 	?>
   <!-- Next and previous buttons -->
-  <a class="prev" onclick="plusSlides(-1)" style="font-size:300%; text-decoration:none; color: white;">&#10094;</a>
-  <a class="next" onclick="plusSlides(1)" style="font-size:300%; text-decoration:none; color: white;">&#10095;</a>
+  <a class="prev" onclick="plusSlides(-1)" style="font-size:3vw; text-decoration:none; color: white;">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)" style="font-size:3vw; text-decoration:none; color: white;">&#10095;</a>
+
+  <!-- The dots/circles -->
+  <div class="text" style="text-align:center; top: 85%;">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+  </div>
+
 </div>
 <br>
 
-<!-- The dots/circles -->
-<div class="text" style="text-align:center; bottom: -40%;">
-  <span class="dot" onclick="currentSlide(1)"></span>
-  <span class="dot" onclick="currentSlide(2)"></span>
-  <span class="dot" onclick="currentSlide(3)"></span>
-</div>
-
 <!-- Coluna Quem Somos -->
-<div class="container-fluid" style="background-color:#2E2E2E; height:250px;" id="sobrenos">
+<div class="container-fluid" style="background-color:#2E2E2E; height:250px; overflow: auto;" id="sobrenos">
     <div class="row">
         <div class="col-sm-6" style="text-align:center;">
             <p style="height: 70px">
@@ -55,7 +62,8 @@
         <div class="col-sm-6" style="text-align:left;">
             <p style="height: 70px">
                 <font face="monospace" color="#f2f2f2">
-                    <h3>A ScaleUp Jr é uma empresa composta por estudantes do curso de Química Industrial e Química Licenciatura da UFOP.</h3>
+                    <h3>A ScaleUp Jr é uma empresa composta por estudantes do curso
+						 de Química Industrial e Química Licenciatura da UFOP.</h3>
                 </font>
             </p>
         </div>
@@ -64,7 +72,7 @@
 <br>
 
 <!-- Coluna de Missão, Visão e Valores -->
-<div class="container-fluid" style="background-color:#2E2E2E; height:350px;">
+<div class="container-fluid" style="background-color:#2E2E2E; height:350px; overflow: auto;">
     <div class="row">
         <!-- Coluna da Esquerda -->
         <div class="col-sm-4" style="text-align:center;">
@@ -143,8 +151,8 @@
 		  $exibeImg= "assets/frontend/img/semImagem.png";
 		}
 	?>
-        <div class="col-sm-4 container" style="overflow-y: auto; opacity: 0.5; filter: alpha(opacity=50);
-        margin: auto 0.4%; width: 32.5%; height: 380px;
+        <div class="col-sm-3 container" style="overflow-y: auto; opacity: 0.5; filter: alpha(opacity=50);
+        margin: auto 0.4%; min-width: 32.5%; height: 380px;
         background-image: url(<?php echo $exibeImg ?>); background-size: 100% 100%;">
             <div class="servico-txt">
                 <h1 style="color:#f2f2f2; font-size:200%;">&#x2B21;</h1>
@@ -214,13 +222,13 @@
     </div>
 </div>
 <!-- MEJ -->
-<div class="container" style="margin-top:-6em; position: absolute; left: 2%" id="mej">
+<div class="container" style="margin-left: 2em;" id="mej">
         <font face="monospace">
-            <h1 style="font-size:300%;"><b>Movimento Empresa Júnior - MEJ</b></h1> <!--Esta um pouco desalinhado -->
+            <h1 style="font-size:300%;"><b>Movimento Empresa Júnior - MEJ</b></h1>
         </font>
 </div>
 <br>
-<div class="container-fluid" style="opacity: 0.5; filter: alpha(opacity=50);
+<div class="container-fluid" style="overflow: auto; opacity: 0.5; filter: alpha(opacity=50);
 -webkit-filter: grayscale(100%); filter: grayscale(100%); width: 100%; height: 900px;
 background-image: url('assets/frontend/img/mej.jpg'); background-size: 100% 100%;">
     <div class="container-fluid" style="text-align:center;  text-shadow: 3px 3px 8px #000000;">

@@ -1,7 +1,7 @@
 </div>
 <!-- /.row -->
 <br>
-<section class="footer" style="background-color:#2E2E2E; height: 900px" id="contato">
+<section class="footer" style="background-color:#2E2E2E; display: inline-block; width: 100%" id="contato">
     <br><br><br>
     <div class="container-fluid">
         <font face="monospace" color="#9aff01">
@@ -44,13 +44,13 @@
 
             <!-- Botão Enviar -->
             <br>
-            <div class="form-group" style="margin: 10px 2%;">
+            <div class="form-group" style="margin: auto 2%;">
                 <button  id="buttonEnviar" type="submit" class="btn btn-default"
                 style="background-color:#9aff01; border-color:#9aff01; height:60px; width:200px">
                 <font face="monospace" style="font-size:150%">Enviar</font>
                 </button>
+                <br><br><br><br>
             </div>
-            <br>
         </form>
     </div>
 </section>
