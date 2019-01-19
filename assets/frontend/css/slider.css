@@ -42,7 +42,7 @@
 /* Caption text */
 .text {
   color: #f2f2f2;
-  font-size: 70px;
+  font-size: 5vw;
   text-shadow: 2px 2px 8px #000000;
   padding: 8px 12px;
   position: absolute;
@@ -52,7 +52,7 @@
 }
 .subtext {
   color: #f2f2f2;
-  font-size: 35px;
+  font-size: 2vw;
   text-shadow: 2px 2px 8px #000000;
   padding: 8px 12px;
   position: absolute;
@@ -73,8 +73,8 @@
 /* The dots/bullets/indicators */
 .dot {
   cursor: pointer;
-  height: 5px;
-  width: 150px;
+  height: 0.3vw;
+  width: 10vw;
   margin: 0 2px;
   background-color: #bbb;
   border-radius: 0%;
