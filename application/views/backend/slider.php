@@ -23,7 +23,7 @@
                             <?php
                                 $this->table->set_heading("Imagem", "Título", "Subtítulo", "Link", "Alterar");
                                 foreach($slider as $slide){
-                                    $fotoslide = img("assets/frontend/img/slider/".$slide->id.".jpg");
+                                    $fotoslide = img("assets/frontend/img/slider/".md5($slide->id).".jpg");
                                     $alterar = anchor(base_url('admin/slider/alterar/'.md5($slide->id)), '<i class="fa fa-refresh fa-fw"></i>Alterar');
                                     $this->table->add_row($fotoslide, $slide->titulo, $slide->subtitulo, $slide->link, $alterar);
                                 }
