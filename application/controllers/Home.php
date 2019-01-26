@@ -5,10 +5,17 @@ class Home extends CI_Controller {
 
     public function __construct(){
         parent::__construct();
+
+        $this->load->model('pessoal_model', 'modelpessoal');
+        $this->load->model('slider_model', 'modelslider');
+        $this->load->model('servicos_model', 'modelservicos');
     }
 
 	public function index()
 	{
+        $dados['pessoal'] = $this->modelpessoal->listar_pessoal();
+        $dados['slider'] = $this->modelslider->mostrar_slides();
+        $dados['servicos'] = $this->modelservicos->listar_servicos();
 
         //Dados a serem enviados para o Cabeçalho
 		$dados['titulo'] = 'Scale Up';

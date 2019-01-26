@@ -1,4 +1,7 @@
 <!-- Slideshow container -->
+<div id="voltarTopo">
+	<a href="#" id="subir" style="text-decoration:none; color: #9aff01; z-index: 9999;"><i class="fas fa-arrow-circle-up fa-3x"></i></a>
+</div>
 <div class="slideshow-container" id="home">
 
     <style>
@@ -8,42 +11,46 @@
             animation-name: fade;
             animation-duration: 3s;
         }
+		@media (max-width: 768px) {
+			.slideimg {
+				width:100% !important;
+				height:250px !important;
+			}
+		}
     </style>
 
   <!-- Full-width images with number and caption text -->
-  <div class="mySlides fadeslide">
-    <img src="<?php echo base_url('assets/frontend/img/slider/slider1.jpg') ?>" style="width:100%">
-    <font face="monospace"><div class="text"><b>União, Sinergia e Paixão.</b></div></font>
-    <font face="monospace"><div class="subtext"><a href="#" style="text-decoration:none; color: inherit;">Conheça nossa equipe.</a></div></font>
-  </div>
-
-  <div class="mySlides fadeslide">
-    <img src="<?php echo base_url('assets/frontend/img/slider/slider2.jpg') ?>" style="width:100%">
-    <font face="monospace"><div class="text"><b>Digite algo aqui!</b></div></font>
-    <font face="monospace"><div class="subtext"><a href="#" style="text-decoration:none; color: inherit;">Mais um texto!</a></div></font>
-  </div>
-
-  <div class="mySlides fadeslide">
-    <img src="<?php echo base_url('assets/frontend/img/slider/slider3.jpg') ?>" style="width:100%">
-    <font face="monospace"><div class="text"><b>Escreva algo!</b></div></font>
-    <font face="monospace"><div class="subtext"><a href="#" style="text-decoration:none; color: inherit;">Esvreva mais alguma coisa.</a></div></font>
-  </div>
-
+	<?php
+	  foreach($slider as $slides){
+	?>
+	<div class="mySlides fadeslide">
+	<img class="slideimg" src="<?php echo base_url('assets/frontend/img/slider/'.md5($slides->id).'.jpg') ?>" style="width:100%; height:850px;">
+	<font face="monospace"><div class="text"><b><?php echo $slides->titulo ?></b></div></font>
+	<font face="monospace"><div class="subtext">
+		<a href="<?php echo limpar($slides->link) ?>" style="text-decoration:none; color: inherit;">
+			<?php echo $slides->subtitulo ?>
+		</a></div>
+	</font>
+	</div>
+	<?php
+	}
+	?>
   <!-- Next and previous buttons -->
-  <a class="prev" onclick="plusSlides(-1)" style="font-size:300%; text-decoration:none; color: white;">&#10094;</a>
-  <a class="next" onclick="plusSlides(1)" style="font-size:300%; text-decoration:none; color: white;">&#10095;</a>
+  <a class="prev" onclick="plusSlides(-1)" style="font-size:3vw; text-decoration:none; color: white;">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)" style="font-size:3vw; text-decoration:none; color: white;">&#10095;</a>
+
+  <!-- The dots/circles -->
+  <div class="text" style="text-align:center; top: 85%;">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+  </div>
+
 </div>
 <br>
 
-<!-- The dots/circles -->
-<div class="text" style="text-align:center; bottom: -40%;">
-  <span class="dot" onclick="currentSlide(1)"></span>
-  <span class="dot" onclick="currentSlide(2)"></span>
-  <span class="dot" onclick="currentSlide(3)"></span>
-</div>
-
 <!-- Coluna Quem Somos -->
-<div class="container-fluid" style="background-color:#2E2E2E; height:250px;" id="sobrenos">
+<div class="container-fluid" style="background-color:#2E2E2E; height:250px; overflow: auto;" id="sobrenos">
     <div class="row">
         <div class="col-sm-6" style="text-align:center;">
             <p style="height: 70px">
@@ -55,7 +62,8 @@
         <div class="col-sm-6" style="text-align:left;">
             <p style="height: 70px">
                 <font face="monospace" color="#f2f2f2">
-                    <h3>A ScaleUp Jr é uma empresa composta por estudantes do curso de Química Industrial e Química Licenciatura da UFOP.</h3>
+                    <h3>A ScaleUp Jr é uma empresa composta por estudantes do curso
+						 de Química Industrial e Química Licenciatura da UFOP.</h3>
                 </font>
             </p>
         </div>
@@ -64,7 +72,7 @@
 <br>
 
 <!-- Coluna de Missão, Visão e Valores -->
-<div class="container-fluid" style="background-color:#2E2E2E; height:350px;">
+<div class="container-fluid" style="background-color:#2E2E2E; height:350px; overflow: auto;">
     <div class="row">
         <!-- Coluna da Esquerda -->
         <div class="col-sm-4" style="text-align:center;">
@@ -120,49 +128,45 @@
 </div>
 <br>
 <div class="container-fluid">
-    <div class="row">
-    <!-- Coluna da Esquerda -->
-        <div class="col-sm-4 container" style="opacity: 0.5; filter: alpha(opacity=50);
-        margin: auto 0.4%; width: 32.5%; height: 380px;
-        background-image: url('assets/frontend/img/servico/servico1.jpg'); background-size: 100% 100%;">
-            <div class="text" style="height: 50%; margin: auto -3%">
+	<style>
+		.servico-txt {
+			color: #f2f2f2;
+		    font-size: 50px;
+		    text-shadow: 2px 2px 8px #000000;
+		    padding: 8px 12px;
+		    position: absolute;
+		    width: 100%;
+		    text-align: center;
+			margin-left: -0.3em;
+
+		}
+	</style>
+	<div class="row">
+	<?php
+	foreach($servicos as $servico){
+		if($servico->imagem == 1){
+		  $exibeImg= "assets/frontend/img/servico/".$servico->id.".jpg";
+		}
+		else {
+		  $exibeImg= "assets/frontend/img/semImagem.png";
+		}
+	?>
+        <div class="col-sm-3 container" style="overflow-y: auto; opacity: 0.5; filter: alpha(opacity=50);
+        margin: auto 0.4%; min-width: 32.5%; height: 380px;
+        background-image: url(<?php echo $exibeImg ?>); background-size: 100% 100%;">
+            <div class="servico-txt">
                 <h1 style="color:#f2f2f2; font-size:200%;">&#x2B21;</h1>
                 <font face="monospace" color="#f2f2f2">
-                    <h1 style="font-size:100%"><b>Serviço 1</b></h1>
+                    <h1 style="font-size:100%"><b><?php echo $servico->nome?></b></h1>
                 </font>
                 <font face="monospace" color="#f2f2f2">
-                    <h4>Nesta sessão será descrito o serviço realizado</h4>
+                    <h4><?php echo $servico->descricao?></h4>
                 </font>
             </div>
         </div>
-    <!-- Coluna do Meio -->
-        <div class="col-sm-4 container" style="opacity: 0.5; filter: alpha(opacity=50);
-        margin: auto 0.4%; width: 32.5%; height: 380px;
-        background-image: url('assets/frontend/img/servico/servico2.jpg'); background-size: 100% 100%;">
-            <div class="text" style="height: 50%; margin: auto -3%">
-                <h1 style="color:#f2f2f2; font-size:200%;">&#x2B21;</h1>
-                <font face="monospace" color="#f2f2f2">
-                    <h1 style="font-size:100%"><b>Serviço 2</b></h1>
-                </font>
-                <font face="monospace" color="#f2f2f2">
-                    <h4>Nesta sessão será descrito o serviço realizado</h4>
-                </font>
-            </div>
-        </div>
-    <!-- Coluna da Direita -->
-        <div class="col-sm-4 container" style="opacity: 0.5; filter: alpha(opacity=50);
-        margin: auto 0.4%; width: 32.5%; height: 380px;
-        background-image: url('assets/frontend/img/servico/servico3.jpg'); background-size: 100% 100%;">
-            <div class="text" style="height: 50%; margin: auto -3%">
-                <h1 style="color:#f2f2f2; font-size:200%;">&#x2B21;</h1>
-                <font face="monospace" color="#f2f2f2">
-                    <h1 style="font-size:100%"><b>Serviço 3</b></h1>
-                </font>
-                <font face="monospace" color="#f2f2f2">
-                    <h4>Nesta sessão será descrito o serviço realizado</h4>
-                </font>
-            </div>
-        </div>
+		<?php
+		}
+		?>
     </div>
 </div>
 <br>
@@ -179,127 +183,52 @@
             <h1 style="font-size:300%;"><b>Equipe</b></h1> <!--Esta um pouco desalinhado -->
         </font>
 </div>
-<br><br><br><br><br>
+<br><br><br><br><br><br><br>
 <!-- As fotos estão desalinhadas com o texto e estão sem a borda -->
 <div class="container-fluid">
     <div class="row">
     <!-- Coluna da Esquerda -->
-    <div class="col-sm-4">
-        <div class="hexagon" style="background-image: url(assets/frontend/img/pessoal/pessoal1.jpg);">
-          <div class="hexTop"></div>
-          <div class="hexBottom"></div>
-        </div>
-        <p>
-            <font face="monospace">
-                <h1 style="font-size:250%; text-align:center;">Nome e sobrenome</h1>
-            </font>
-        </p>
-        <p>
-            <font face="monospace" color="#9aff01">
-                <h4 style="font-size:150%; text-align:center;"><b>Cargo ou função</b></h4>
-            </font>
-        </p>
-    </div>
-<!-- Coluna do Meio -->
-    <div class="col-sm-4">
-        <div class="hexagon" style="background-image: url(assets/frontend/img/pessoal/pessoal2.jpg);">
-          <div class="hexTop"></div>
-          <div class="hexBottom"></div>
-        </div>
-        <p>
-            <font face="monospace">
-                <h1 style="font-size:250%; text-align:center;">Nome e sobrenome</h1>
-            </font>
-        </p>
-        <p>
-            <font face="monospace" color="#9aff01">
-                <h4 style="font-size:150%; text-align:center;"><b>Cargo ou função</b></h4>
-            </font>
-        </p>
-    </div>
-<!-- Coluna da Direita -->
-    <div class="col-sm-4">
-        <div class="hexagon" style="background-image: url(assets/frontend/img/pessoal/pessoal3.jpg);">
-          <div class="hexTop"></div>
-          <div class="hexBottom"></div>
-        </div>
-        <p>
-            <font face="monospace">
-                <h1 style="font-size:250%; text-align:center;">Nome e sobrenome</h1>
-            </font>
-        </p>
-        <p>
-            <font face="monospace" color="#9aff01">
-                <h4 style="font-size:150%; text-align:center;"><b>Cargo ou função</b></h4>
-            </font>
-        </p>
+		<?php
+			foreach($pessoal as $equipe){
+		?>
+	    <div class="col-sm-4">
+			<?php
+				if($equipe->imagem == 1){
+					$mostraImg= "assets/frontend/img/pessoal/".$equipe->id.".jpg";
+				}
+				else {
+					$mostraImg= "assets/frontend/img/semAvatar.png";
+				}
+			?>
+	        <div class="hexagon" style="background-image: url(<?php echo $mostraImg ?>);">
+	          <div class="hexTop"></div>
+	          <div class="hexBottom"></div>
+	        </div>
+	        <p>
+	            <font face="monospace">
+	                <h1 style="font-size:250%; text-align:center;"><?php echo $equipe->nome ?></h1>
+	            </font>
+	        </p>
+	        <p>
+	            <font face="monospace" color="#9aff01">
+	                <h4 style="font-size:150%; text-align:center;"><b><?php echo $equipe->cargo ?></b></h4>
+	            </font>
+	        </p>
+			<br><br><br><br><br><br>
+	    </div>
+		<?php
+			}
+		?>
     </div>
 </div>
-<br><br><br><br><br>
-<div class="container-fluid">
-    <div class="row">
-        <!-- Coluna da Esquerda -->
-        <div class="col-sm-4">
-            <div class="hexagon" style="background-image: url(assets/frontend/img/pessoal/pessoal4.jpg);">
-              <div class="hexTop"></div>
-              <div class="hexBottom"></div>
-            </div>
-            <p>
-                <font face="monospace">
-                    <h1 style="font-size:250%; text-align:center;">Nome e sobrenome</h1>
-                </font>
-            </p>
-            <p>
-                <font face="monospace" color="#9aff01">
-                    <h4 style="font-size:150%; text-align:center;"><b>Cargo ou função</b></h4>
-                </font>
-            </p>
-        </div>
-    <!-- Coluna do Meio -->
-        <div class="col-sm-4">
-            <div class="hexagon" style="background-image: url(assets/frontend/img/pessoal/pessoal5.jpg);">
-              <div class="hexTop"></div>
-              <div class="hexBottom"></div>
-            </div>
-            <p>
-                <font face="monospace">
-                    <h1 style="font-size:250%; text-align:center;">Nome e sobrenome</h1>
-                </font>
-            </p>
-            <p>
-                <font face="monospace" color="#9aff01">
-                    <h4 style="font-size:150%; text-align:center;"><b>Cargo ou função</b></h4>
-                </font>
-            </p>
-        </div>
-    <!-- Coluna da Direita -->
-        <div class="col-sm-4">
-            <div class="hexagon" style="background-image: url(assets/frontend/img/pessoal/pessoal6.jpg);">
-              <div class="hexTop"></div>
-              <div class="hexBottom"></div>
-            </div>
-            <p>
-                <font face="monospace">
-                    <h1 style="font-size:250%; text-align:center;">Nome e sobrenome</h1>
-                </font>
-            </p>
-            <p>
-                <font face="monospace" color="#9aff01">
-                    <h4 style="font-size:150%; text-align:center;"><b>Cargo ou função</b></h4>
-                </font>
-            </p>
-        </div>
-    </div>
-</div>
-<br><br><br>
 <!-- MEJ -->
-<div class="txt" style="margin-left:3em" id="mej">
+<div class="container" style="margin-left: 2em;" id="mej">
         <font face="monospace">
-            <h1 style="font-size:300%;"><b>Movimento Empresa Júnior - MEJ</b></h1> <!--Esta um pouco desalinhado -->
+            <h1 style="font-size:300%;"><b>Movimento Empresa Júnior - MEJ</b></h1>
         </font>
 </div>
 <br>
-<div class="container-fluid" style="opacity: 0.5; filter: alpha(opacity=50);
+<div class="container-fluid" style="overflow: auto; opacity: 0.5; filter: alpha(opacity=50);
 -webkit-filter: grayscale(100%); filter: grayscale(100%); width: 100%; height: 900px;
 background-image: url('assets/frontend/img/mej.jpg'); background-size: 100% 100%;">
     <div class="container-fluid" style="text-align:center;  text-shadow: 3px 3px 8px #000000;">
