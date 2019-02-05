@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 17-Jan-2019 às 20:34
+-- Generation Time: 05-Fev-2019 às 15:28
 -- Versão do servidor: 10.1.37-MariaDB
 -- versão do PHP: 7.3.0
 
@@ -45,6 +45,13 @@ CREATE TABLE `login` (
   `user` varchar(150) NOT NULL,
   `senha` longtext NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Extraindo dados da tabela `login`
+--
+
+INSERT INTO `login` (`id`, `user`, `senha`) VALUES
+(1, 'up_admin', '3cbca52e84fa32658ccefc0f5cf1aef2');
 
 -- --------------------------------------------------------
 
@@ -128,7 +135,7 @@ CREATE TABLE `slider` (
 
 INSERT INTO `slider` (`id`, `imagem`, `titulo`, `subtitulo`, `link`) VALUES
 (1, 1, 'União, Sinergia e Paixão.', 'Conheça nossa equipe.', '#equipe'),
-(2, 1, 'testando slides', 'clique aq e veja ', 'algum link qlqr'),
+(2, 1, 'teste crud', 'clique aq e veja ', 'algum link qlqr'),
 (3, 1, 'titulo', 'subtitulo', '#home'),
 (4, 1, 'teste de erro', 'possivel erro', '#home');
 
@@ -180,13 +187,13 @@ ALTER TABLE `slider`
 -- AUTO_INCREMENT for table `login`
 --
 ALTER TABLE `login`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `pessoal`
 --
 ALTER TABLE `pessoal`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `postagens`
@@ -198,7 +205,7 @@ ALTER TABLE `postagens`
 -- AUTO_INCREMENT for table `servicos`
 --
 ALTER TABLE `servicos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `slider`

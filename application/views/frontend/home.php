@@ -24,27 +24,28 @@
 	  foreach($slider as $slides){
 	?>
 	<div class="mySlides fadeslide">
-	<img class="slideimg" src="<?php echo base_url('assets/frontend/img/slider/'.md5($slides->id).'.jpg') ?>" style="width:100%; height:850px;">
-	<font face="monospace"><div class="text"><b><?php echo $slides->titulo ?></b></div></font>
-	<font face="monospace"><div class="subtext">
-		<a href="<?php echo limpar($slides->link) ?>" style="text-decoration:none; color: inherit;">
-			<?php echo $slides->subtitulo ?>
-		</a></div>
-	</font>
+		<img class="slideimg" src="<?php echo base_url('assets/frontend/img/slider/'.md5($slides->id).'.jpg') ?>" style="width:100%; height:850px;">
+		<font face="monospace"><div class="text"><b><?php echo $slides->titulo ?></b></div></font>
+		<font face="monospace"><div class="subtext">
+			<a href="<?php echo limpar($slides->link) ?>" style="text-decoration:none; color: inherit;">
+				<?php echo $slides->subtitulo ?>
+			</a></div>
+		</font>
 	</div>
 	<?php
 	}
 	?>
-  <!-- Next and previous buttons -->
-  <a class="prev" onclick="plusSlides(-1)" style="font-size:3vw; text-decoration:none; color: white;">&#10094;</a>
-  <a class="next" onclick="plusSlides(1)" style="font-size:3vw; text-decoration:none; color: white;">&#10095;</a>
 
-  <!-- The dots/circles -->
-  <div class="text" style="text-align:center; top: 85%;">
-    <span class="dot" onclick="currentSlide(1)"></span>
-    <span class="dot" onclick="currentSlide(2)"></span>
-    <span class="dot" onclick="currentSlide(3)"></span>
-  </div>
+	<!-- The dots/circles -->
+	<div class="dotposition">
+		<span class="dot" onclick="currentSlide(1)"></span>
+		<span class="dot" onclick="currentSlide(2)"></span>
+		<span class="dot" onclick="currentSlide(3)"></span>
+	</div>
+
+	<!-- Next and previous buttons -->
+	<a class="prev" onclick="plusSlides(-1)" style="font-size:3vw; text-decoration:none; color: white;">&#10094;</a>
+	<a class="next" onclick="plusSlides(1)" style="font-size:3vw; text-decoration:none; color: white;">&#10095;</a>
 
 </div>
 <br>
@@ -138,35 +139,51 @@
 		    width: 100%;
 		    text-align: center;
 			margin-left: -0.3em;
-
 		}
 	</style>
 	<div class="row">
 	<?php
 	foreach($servicos as $servico){
-		if($servico->imagem == 1){
+		if($servico->imagem == 1){ //se tiver imagem aplica filtro escuro
 		  $exibeImg= "assets/frontend/img/servico/".$servico->id.".jpg";
-		}
-		else {
-		  $exibeImg= "assets/frontend/img/semImagem.png";
-		}
 	?>
-        <div class="col-sm-3 container" style="overflow-y: auto; opacity: 0.5; filter: alpha(opacity=50);
-        margin: auto 0.4%; min-width: 32.5%; height: 380px;
-        background-image: url(<?php echo $exibeImg ?>); background-size: 100% 100%;">
-            <div class="servico-txt">
-                <h1 style="color:#f2f2f2; font-size:200%;">&#x2B21;</h1>
-                <font face="monospace" color="#f2f2f2">
-                    <h1 style="font-size:100%"><b><?php echo $servico->nome?></b></h1>
-                </font>
-                <font face="monospace" color="#f2f2f2">
-                    <h4><?php echo $servico->descricao?></h4>
-                </font>
-            </div>
-        </div>
+		  <div class="col-sm-3 container" style="overflow-y: auto;
+          margin: auto 0.4%; min-width: 32.5%; height: 380px;
+          background-image: url(<?php echo $exibeImg ?>); background-size: 100% 100%;">
+              <div class="servico-txt" style=" background-color: rgba(128,128,128, 0.5); background-size: cover;
+  			min-width: 32.5%; min-height: 380px;">
+                  <h1 style="color:#f2f2f2; font-size:200%;">&#x2B21;</h1>
+                  <font face="monospace" color="#f2f2f2">
+                      <h1 style="font-size:100%"><b><?php echo $servico->nome?></b></h1>
+                  </font>
+                  <font face="monospace" color="#f2f2f2">
+                      <h4><?php echo $servico->descricao?></h4>
+                  </font>
+              </div>
+          </div>
 		<?php
 		}
+		else { //filtro claro caso nao tenha imagem
+		  $exibeImg= "assets/frontend/img/semImagem.png";
 		?>
+		  <div class="col-sm-3 container" style="overflow-y: auto;
+          margin: auto 0.4%; min-width: 32.5%; height: 380px;
+          background-image: url(<?php echo $exibeImg ?>); background-size: 100% 100%;">
+              <div class="servico-txt" style=" background-color: rgba(255,255,255,0.3); background-size: cover;
+  			min-width: 32.5%; min-height: 380px;">
+                  <h1 style="color:#f2f2f2; font-size:200%;">&#x2B21;</h1>
+                  <font face="monospace" color="#f2f2f2">
+                      <h1 style="font-size:100%"><b><?php echo $servico->nome?></b></h1>
+                  </font>
+                  <font face="monospace" color="#f2f2f2">
+                      <h4><?php echo $servico->descricao?></h4>
+                  </font>
+              </div>
+          </div>
+		<?php
+		}
+	}
+	?>
     </div>
 </div>
 <br>
@@ -228,12 +245,19 @@
         </font>
 </div>
 <br>
-<div class="container-fluid" style="overflow: auto; opacity: 0.5; filter: alpha(opacity=50);
--webkit-filter: grayscale(100%); filter: grayscale(100%); width: 100%; height: 900px;
+<style>
+@media (max-width: 768px) {
+		.mej {
+			width:100% !important;
+			height:450px !important;
+		}
+	}
+</style>
+<div class="container-fluid mej" style="overflow: auto; opacity: 0.5; filter: alpha(opacity=50);
+-webkit-filter: grayscale(100%); filter: grayscale(100%); width: 100%;
 background-image: url('assets/frontend/img/mej.jpg'); background-size: 100% 100%;">
     <div class="container-fluid" style="text-align:center;  text-shadow: 3px 3px 8px #000000;">
-        <br><br><br><br><br>
-        <i class="fas fa-hands-helping fa-9x" style="color:#f2f2f2;"></i>
+        <i class="fas fa-hands-helping fa-9x" style="color:#f2f2f2; margin-top: 0.5em"></i>
         <font face="monospace" color="#f2f2f2">
         <br><br>
         <h3>O MEJ tem como propósito a busca por um Brasil Empreendedor.
@@ -251,5 +275,6 @@ background-image: url('assets/frontend/img/mej.jpg'); background-size: 100% 100%
             <li style="font-size:150%; margin: 30px 5%">41,6% dos nossos projetos foram destinados para Micro e Pequenas Empresas!</li>
         </ul>
         </font>
+		<br>
     </div>
 </div>
