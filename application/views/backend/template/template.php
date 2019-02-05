@@ -32,7 +32,7 @@
                         <a href="<?php echo base_url('admin/contato') ?>"><i class="fa fa-at fa-fw"></i> Contato</a>
                     </li>
                     <li>
-                        <a href="<?php echo base_url('admin/usuarios/logout') ?>"><i class="fa fa-sign-out fa-fw"></i> Sair do Sistema</a>
+                        <a href="<?php echo base_url('admin/usuario/logout') ?>"><i class="fa fa-sign-out fa-fw"></i> Sair do Sistema</a>
                     </li>
                 </ul>
             </div>

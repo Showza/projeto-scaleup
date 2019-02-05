@@ -71,6 +71,17 @@
 }
 
 /* The dots/bullets/indicators */
+.dotposition {
+    color: #f2f2f2;
+    font-size: 5vw;
+    text-shadow: 2px 2px 8px #000000;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
 .dot {
   cursor: pointer;
   height: 0.3vw;
@@ -83,7 +94,7 @@
 }
 
 .active, .dot:hover {
-  background-color: #f2f2f2;
+  background-color: rgba(154, 255, 1, 1);
 }
 
 /* Fading animation */
