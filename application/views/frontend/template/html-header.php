@@ -21,6 +21,7 @@
     <link href="<?php echo base_url('assets/frontend/css/hexagon.css') ?>" rel="stylesheet">
     <link href="<?php echo base_url('assets/frontend/css/backtotop.css') ?>" rel="stylesheet">
     <link href="<?php echo base_url('assets/frontend/css/scrollbar.css') ?>" rel="stylesheet">
+    <link href="<?php echo base_url('assets/frontend/css/pagination.css') ?>" rel="stylesheet">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
