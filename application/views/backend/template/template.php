@@ -26,7 +26,7 @@
                         <a href="<?php echo base_url('admin/servicos') ?>"><i class="fa fa-clipboard fa-fw"></i> Serviços</a>
                     </li>
                     <li>
-                        <a href="<?php echo base_url('admin/processo_seletivo') ?>"><i class="fa fa-coffee fa-fw"></i> Equipe</a>
+                        <a href="<?php echo base_url('admin/pessoal') ?>"><i class="fa fa-coffee fa-fw"></i> Equipe</a>
                     </li>
                     <li>
                         <a href="<?php echo base_url('admin/contato') ?>"><i class="fa fa-at fa-fw"></i> Contato</a>
