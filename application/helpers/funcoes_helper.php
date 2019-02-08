@@ -61,3 +61,35 @@ function postadoem($string) {
     $hora = date('H:i', strtotime($string));
     return $semana . ', ' . $dia . ' de ' . $mes . ' de ' . $ano . ' às ' . $hora;
 }
+
+function formatodata($string) {
+    $dia = date('d', strtotime($string));
+    $mes_num = date('m', strtotime($string));
+    if ($mes_num === "01") {
+        $mes = "01";
+    } elseif ($mes_num === "02") {
+        $mes = "02";
+    } elseif ($mes_num === "03") {
+        $mes = "03";
+    } elseif ($mes_num === "04") {
+        $mes = "04";
+    } elseif ($mes_num === "05") {
+        $mes = "05";
+    } elseif ($mes_num === "06") {
+        $mes = "06";
+    } elseif ($mes_num === "07") {
+        $mes = "07";
+    } elseif ($mes_num === "08") {
+        $mes = "08";
+    } elseif ($mes_num === "09") {
+        $mes = "09";
+    } elseif ($mes_num === "10") {
+        $mes = "10";
+    } elseif ($mes_num === "11") {
+        $mes = "11";
+    } else {
+        $mes = "12";
+    }
+    $ano = date('Y', strtotime($string));
+    return $dia . '/' . $mes . '/' . $ano;
+}

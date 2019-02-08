@@ -2,56 +2,37 @@
 	<a href="#" id="subir" style="text-decoration:none; color: #9aff01; z-index: 9999;"><i class="fas fa-arrow-circle-up fa-3x"></i></a>
 </div>
 <!-- Page Content -->
-<div class="container fluid" style="width: 100%">
+<div class="container-fluid">
     <!-- Blog Post -->
-    <font face="monospace" style="text-align:center;">
+	<div class="txt" style="margin:3em; margin-top: 0">
+	    <font face="monospace">
+	        <h1 style="font-size:300%;"><b>Blog</b></h1> <!--Esta um pouco desalinhado -->
+	    </font>
+	</div>
     <?php
         foreach($postagem as $destaque){
     ?>
-    <h2>
-        <a href="<?php echo base_url('postagem/'.$destaque->id.'/'.limpar($destaque->titulo)) ?>" style="text-decoration:none; color: #9aff01;">
-        <b><?php echo $destaque->titulo ?></b>
-        </a>
-    </h2>
-    <p class="lead">
-        por <font style="color: #9aff01;"><?php echo $destaque->autor ?></font>
-    </p>
-    <p><span><i class="far fa-clock"></i></span> <?php echo postadoem($destaque->data) ?></p>
-    <br>
-    </font>
+	<div class="container-fluid" style="width: 100%; min-height: 100px; background-color:#2E2E2E;">
+		<p style="height: 15px">
+		    <h2>
+				<font face="monospace" style="color: #9aff01; float:left; margin-left: 1em;">
+		        <a href="<?php echo base_url('postagem/'.$destaque->id.'/'.limpar($destaque->titulo)) ?>" style="text-decoration:none; color: #9aff01;">
+		        <b><?php echo $destaque->titulo ?></b>
+		        </a>
+				</font>
+				<h4>
+				<font face="monospace" style="color: #9aff01; float: right; margin-top: 5px">
+				<b><?php echo formatodata($destaque->data) ?></b>
+				</font>
+				</h4>
+		    </h2>
+		</p>
+	</div>
+	<br>
     <?php
-    if($destaque->imagem == 1){
-        $fotopub= base_url("assets/frontend/img/publicacao/".md5($destaque->id).".jpg");
-    ?>
-    <img class="img-responsive" src="<?php echo $fotopub ?>" alt="" style="object-fit: cover;
-    width: 70%;
-    height: 20vw;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;">
-    <br>
-    <?php
-    }
-    ?>
-    <font face="monospace" style="text-align:center;">
-    <p><?php echo $destaque->subtitulo ?></p>
-    <br>
-    </font>
-    <form method="post" action="<?php echo base_url('postagem/'.$destaque->id.'/'.limpar($destaque->titulo)) ?>"
-    style="text-align:center; display: flex; align-items: center; justify-content: center;">
-        <button  id="buttonEnviar" type="submit" class="btn btn-default"
-        style="background-color:#9aff01; border-color:#9aff01; height:50px; width:150px">
-            <b style="color: #2E2E2E;">
-            <font face="monospace" style="text-align:center;">Leia mais</font>
-            <span class="glyphicon glyphicon-chevron-right"></span>
-            </b>
-        </button>
-    </form>
-    <font face="monospace" style="text-align:center; display: block; margin-left: auto; margin-right: auto;">
-    <hr>
-    <?php
-    }
-    echo "<div class'paginacao'".$links_paginacao."</div>";
-    ?>
-    </font>
+	}
+	?>
+	<font face="monospace" style="text-align:center; display: block; margin-left: auto; margin-right: auto;">
+		<?php echo "<div class'paginacao'".$links_paginacao."</div>"; ?>
+	</font>
 </div>

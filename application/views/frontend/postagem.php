@@ -2,7 +2,7 @@
 	<a href="#" id="subir" style="text-decoration:none; color: #9aff01; z-index: 9999;"><i class="fas fa-arrow-circle-up fa-3x"></i></a>
 </div>
 <!-- Page Content -->
-<div class="container fluid" style="width: 50%">
+<div class="container-fluid" style="width: 50%">
     <!-- Blog Post -->
     <font face="monospace" style="text-align:center;">
     <?php
