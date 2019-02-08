@@ -211,7 +211,7 @@
 	    <div class="col-sm-4">
 			<?php
 				if($equipe->imagem == 1){
-					$mostraImg= "assets/frontend/img/pessoal/".$equipe->id.".jpg";
+					$mostraImg= "assets/frontend/img/pessoal/".md5($equipe->id).".jpg";
 				}
 				else {
 					$mostraImg= "assets/frontend/img/semAvatar.png";
