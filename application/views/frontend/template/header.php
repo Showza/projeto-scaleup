@@ -87,7 +87,7 @@
                       <font face="monospace"><b>EQUIPE</b></font></a>
               </li>
               <li>
-                  <a href="<?php echo base_url('#contato'); ?>" style="line-height:80px; text-decoration:none; color:#000000; font-size:25px">
+                  <a href="#contato" style="line-height:80px; text-decoration:none; color:#000000; font-size:25px">
                       <font face="monospace"><b>CONTATO</b></font></a>
               </li>
               <li>
