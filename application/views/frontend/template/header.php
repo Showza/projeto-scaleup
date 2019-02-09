@@ -71,19 +71,19 @@
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav navbar-right">
               <li>
-                  <a href="#home" style="line-height:80px; text-decoration:none; color:#000000; font-size:25px">
+                  <a href="<?php echo base_url(); ?>" style="line-height:80px; text-decoration:none; color:#000000; font-size:25px">
                       <font face="monospace"><b>HOME</font></b></a>
               </li>
               <li>
-                  <a href="#sobrenos" style="line-height:80px; text-decoration:none; color:#000000; font-size:25px">
+                  <a href="<?php echo base_url('#sobrenos'); ?>" style="line-height:80px; text-decoration:none; color:#000000; font-size:25px">
                       <font face="monospace"><b>SOBRE NÓS</b></font></a>
               </li>
               <li>
-                  <a href="#servicos" style="line-height:80px; text-decoration:none; color:#000000; font-size:25px">
+                  <a href="<?php echo base_url('#servicos'); ?>" style="line-height:80px; text-decoration:none; color:#000000; font-size:25px">
                       <font face="monospace"><b>SERVIÇOS</b></font></a>
               </li>
               <li>
-                  <a href="#equipe" style="line-height:80px; text-decoration:none; color:#000000; font-size:25px">
+                  <a href="<?php echo base_url('#equipe'); ?>" style="line-height:80px; text-decoration:none; color:#000000; font-size:25px">
                       <font face="monospace"><b>EQUIPE</b></font></a>
               </li>
               <li>
@@ -91,11 +91,11 @@
                       <font face="monospace"><b>CONTATO</b></font></a>
               </li>
               <li>
-                  <a href="#mej" style="line-height:80px; text-decoration:none; color:#000000; font-size:25px">
+                  <a href="<?php echo base_url('#mej'); ?>" style="line-height:80px; text-decoration:none; color:#000000; font-size:25px">
                       <font face="monospace"><b>MEJ</b></font></a>
               </li>
               <li>
-                  <a href="#" style="line-height:80px; text-decoration:none; color:#000000; font-size:25px">
+                  <a href="<?php echo base_url('blog'); ?>" style="line-height:80px; text-decoration:none; color:#000000; font-size:25px">
                       <font face="monospace"><b>BLOG</b></font></a>
               </li>
           </ul>

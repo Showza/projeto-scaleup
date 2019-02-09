@@ -13,7 +13,7 @@ class Home extends CI_Controller {
 
 	public function index()
 	{
-        $dados['pessoal'] = $this->modelpessoal->listar_pessoal();
+        $dados['pessoal'] = $this->modelpessoal->mostrar_pessoal();
         $dados['slider'] = $this->modelslider->mostrar_slides();
         $dados['servicos'] = $this->modelservicos->listar_servicos();
 
