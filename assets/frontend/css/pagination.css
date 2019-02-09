@@ -10,6 +10,7 @@
   border-radius: 0px !important;
   border-color: transparent !important;
   margin-left: 2em !important;
+  background-color: transparent !important;
 }
 
 .pagination > .active > a {

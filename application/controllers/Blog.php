@@ -24,7 +24,7 @@
     		$dados['postagem'] = $this->modelblog->mostrar_publicacao($pular, $post_por_pagina);
 
             //Dados a serem enviados para o Cabeçalho
-		    $dados['titulo'] = 'Estatis Jr.';
+		    $dados['titulo'] = 'Scale Up';
 		    $dados['subtitulo'] = 'Blog';
 
             $this->load->view('frontend/template/html-header', $dados);
