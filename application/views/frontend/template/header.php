@@ -64,7 +64,7 @@
               <span class="icon-bar" style="background-color:#f2f2f2"></span>
           </button>
           <a class="navbar-brand" href="<?php echo base_url(); ?>">
-              <img src="assets/frontend/img/logonav.png" style="width: 200px; height: 80px; margin-left:2em">
+              <img src="<?php echo base_url('assets/frontend/img/logonav.png'); ?>" style="width: 200px; height: 80px; margin-left:2em">
           </a>
       </div>
       <!-- Collect the nav links, forms, and other content for toggling -->

@@ -9,7 +9,20 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title><?php echo $titulo.' | '.$subtitulo ?></title>
+    <title><?php echo $titulo.' | '?>
+        <?php
+
+        if($subtitulo != ''){
+            echo $subtitulo;
+        }
+        else{
+            foreach ($subtitulodb as $dbtitulo) {
+                echo $dbtitulo->titulo;
+            }
+        }
+
+        ?>
+    </title>
     <link rel="shortcut icon" type="image/x-icon" href="<?php echo base_url('assets/frontend/img/logo.png') ?>">
 
     <!-- Bootstrap Core CSS -->
