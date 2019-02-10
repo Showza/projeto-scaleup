@@ -55,6 +55,7 @@ $route['translate_uri_dashes'] = FALSE;
 $route['admin'] = 'admin/home/index';
 $route['admin/slider/(:num)'] = 'admin/slider/index/$1';
 $route['admin/pessoal/(:num)'] = 'admin/pessoal/index/$1';
+$route['admin/servicos/(:num)'] = 'admin/servicos/index/$1';
 $route['admin/login'] = 'admin/usuario/pag_login';
 $route['blog/(:num)'] = 'blog/index/$1';
 $route['postagem/(:num)/(:any)'] = 'postagem/index/$1/$2';

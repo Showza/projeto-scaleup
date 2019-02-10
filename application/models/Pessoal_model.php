@@ -21,31 +21,34 @@ class Pessoal_model extends CI_Model {
     public function listar_pessoal($id){
         $this->db->select('id, nome, cargo, imagem');
         $this->db->from('pessoal');
-        $this->db->where('md5(id)', $id);
+        $this->db->where('md5(id)',$id);
         return $this->db->get()->result();
     }
 
-    public function alterar($nome, $cargo, $id){
-        $dados['nome']= $nome;
-        $dados['cargo']= $cargo;
-        $this->db->where('id', $id);
-        return $this->db->update('pessoal', $dados);
+	public function adicionar($nome, $cargo, $imagem){
+        $dados['nome'] = $nome;
+        $dados['cargo'] = $cargo;
+        $dados['imagem'] = $imagem;
+
+        return $this->db->insert('pessoal',$dados);
     }
 
-    public function alterar_img($id){
-        $dados['imagem']= 1;
-        $this->db->where('md5(id)', $id);
-        return $this->db->update('pessoal', $dados);
+    public function alterar($id, $nome, $cargo){
+        $dados['nome'] = $nome;
+        $dados['cargo'] = $cargo;
+
+        $this->db->where('id',$id);
+        return $this->db->update('pessoal',$dados);
     }
 
-    public function adicionar($nome, $cargo){
-        $dados['nome']= $nome;
-        $dados['cargo']= $cargo;
-        return $this->db->insert('pessoal', $dados);
-    }
-
-    public function excluir($id){
-        $this->db->where('md5(id)', $id);
+    public function remover($id, $imagem){
+        $this->db->where('md5(id)',$id);
         return $this->db->delete('pessoal');
+    }
+
+    public function nova_foto($id, $imagem){
+    	$dados['imagem'] = $imagem;
+      	$this->db->where('md5(id)',$id);
+      	return $this->db->update('pessoal',$dados);
     }
 }

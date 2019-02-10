@@ -18,16 +18,16 @@
                         <div class="col-lg-12">
                             <?php
                                 echo validation_errors('<div class="alert alert-danger">','</div>');
-                                foreach($pessoal as $equipe){
-                                echo form_open('admin/pessoal/salvar_alteracoes/'.md5($equipe->id));
+                                foreach($servicos as $servico){
+                                echo form_open('admin/servicos/salvar_alteracoes/'.md5($servico->id));
 
                              ?>
                              <div class="form-group">
                                  <label id="txt-nome">Nome</label>
-                                 <input id="txt-nome" name="txt-nome" type="text" class="form-control" placeholder="Digite o nome do membro" value="<?php echo $equipe->nome ?>">
+                                 <input id="txt-nome" name="txt-nome" type="text" class="form-control" placeholder="Digite o nome do serviço" value="<?php echo $servico->nome ?>">
                                  <br/>
-                                 <label id="txt-cargo">Cargo</label>
-                                 <input id="txt-cargo" name="txt-cargo" type="text" class="form-control" placeholder="Cargo do membro" value="<?php echo $equipe->cargo ?>">
+                                 <label id="txt-descricao">Descricao</label>
+                                 <textarea id="txt-descricao" name="txt-descricao" type="text" class="form-control" placeholder="Descreva o serviço"><?php echo $servico->descricao ?></textarea>
                                  <br/>
                              </div>
                              <button type="submit" class="btn btn-primary">Salvar Alterações</button>
@@ -62,13 +62,13 @@
                         </style>
                         <div class="col-lg-3 col-lg-offset-3">
                             <?php
-                                if($equipe->imagem != null){
-                                    echo img("assets/frontend/img/pessoal/".$equipe->imagem);
+                                if($servico->imagem != null){
+                                    echo img("assets/frontend/img/servico/".$servico->imagem);
                                 }
                                 else {
                                     echo img("assets/frontend/img/SemFoto.png");
                                 }
-                                echo form_open_multipart('admin/pessoal/nova_foto/'.md5($equipe->id).'/'.$equipe->imagem);
+                                echo form_open_multipart('admin/servicos/nova_foto/'.md5($servico->id).'/'.$servico->imagem);
                             ?>
                         </div>
                     </div>
