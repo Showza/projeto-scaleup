@@ -23,8 +23,8 @@
                                  <label id="txt-nome">Nome</label>
                                  <input id="txt-nome" name="txt-nome" type="text" class="form-control" placeholder="Digite o nome do membro">
                                  <br/>
-                                 <label id="txt-descricao">Cargo</label>
-                                 <input id="txt-descricao" name="txt-descricao" type="text" class="form-control" placeholder="Cargo do membro">
+                                 <label id="txt-cargo">Cargo</label>
+                                 <input id="txt-cargo" name="txt-cargo" type="text" class="form-control" placeholder="Cargo do membro">
                                  <br/>
                                  <label id="txt-imagem">Imagem</label>
                                  <input id="txt-imagem" name="txt-imagem" type="file" value="Procurar arquivo..." placeholder="nenhum arquivo selecionado">
@@ -78,7 +78,7 @@
                                                 <h4 class="modal-title" id="myModalLabel2">Exclusão de equipe</h4>
                                             </div>
                                             <div class="modal-body">
-                                                <h4>Deseja Realmente excluir o serviço '.$equipe->nome.'?</h4>
+                                                <h4>Deseja Realmente excluir o membro '.$equipe->nome.'?</h4>
                                             </div>
                                             <div class="modal-footer">
                                                 <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>

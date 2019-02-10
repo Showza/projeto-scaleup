@@ -32,8 +32,8 @@ class Pessoal extends CI_Controller {
 	   $this->load->library('form_validation');
 	   $this->form_validation->set_rules('txt-nome','Nome',
 		   'required|min_length[3]');
-	   $this->form_validation->set_rules('txt-descricao','Descricao',
-		   'required|min_length[10]');
+	   $this->form_validation->set_rules('txt-cargo','cargo',
+		   'required|min_length[3]');
 	   $this->form_validation->set_rules('txt-imagem','Imagem');
 
 	   if($this->form_validation->run() == FALSE){
@@ -41,7 +41,7 @@ class Pessoal extends CI_Controller {
 	   }
 	   else{
 		   $nome = $this->input->post('txt-nome');
-		   $descricao = $this->input->post('txt-descricao');
+		   $cargo = $this->input->post('txt-cargo');
 
 		   $imagem =  $_FILES['txt-imagem'];
 					   $original_name = $_FILES['txt-imagem']['name'];
@@ -53,7 +53,7 @@ class Pessoal extends CI_Controller {
 					   $this->upload->initialize($configuracao);
 
 					   if($this->upload->do_upload('txt-imagem')){
-						   if($this->modelpessoal->adicionar($nome, $descricao, $new_name)){
+						   if($this->modelpessoal->adicionar($nome, $cargo, $new_name)){
 							   redirect(base_url('admin/pessoal'));
 						   }
 					   }
@@ -81,16 +81,16 @@ class Pessoal extends CI_Controller {
    {
 	   $this->load->library('form_validation');
 	   $this->form_validation->set_rules('txt-nome','Nome','required|min_length[3]');
-	   $this->form_validation->set_rules('txt-descricao','Descricao','required|min_length[10]');
+	   $this->form_validation->set_rules('txt-cargo','Cargo','required|min_length[3]');
 
 	   if($this->form_validation->run() == FALSE){
 		   $this->alterar($id);
 	   }
 	   else{
 		   $nome = $this->input->post('txt-nome');
-		   $descricao = $this->input->post('txt-descricao');
+		   $cargo = $this->input->post('txt-cargo');
 
-		   if($this->modelpessoal->alterar($id, $nome, $descricao)){
+		   if($this->modelpessoal->alterar($id, $nome, $cargo)){
 			   redirect(base_url('admin/pessoal'));
 		   }
 		   else{

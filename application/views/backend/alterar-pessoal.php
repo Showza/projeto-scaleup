@@ -27,7 +27,7 @@
                                  <input id="txt-nome" name="txt-nome" type="text" class="form-control" placeholder="Digite o nome do membro" value="<?php echo $equipe->nome ?>">
                                  <br/>
                                  <label id="txt-cargo">Cargo</label>
-                                 <textarea id="txt-cargo" name="txt-cargo" type="text" class="form-control" placeholder="Cargo do membro"><?php echo $equipe->cargo ?></textarea>
+                                 <input id="txt-cargo" name="txt-cargo" type="text" class="form-control" placeholder="Cargo do membro" value="<?php echo $equipe->cargo ?>">
                                  <br/>
                              </div>
                              <button type="submit" class="btn btn-primary">Salvar Alterações</button>
