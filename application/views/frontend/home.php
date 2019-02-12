@@ -144,8 +144,8 @@
 	<div class="row">
 	<?php
 	foreach($servicos as $servico){
-		if($servico->imagem == 1){ //se tiver imagem aplica filtro escuro
-		  $exibeImg= "assets/frontend/img/servico/".$servico->id.".jpg";
+		if($servico->imagem != null){ //se tiver imagem aplica filtro escuro
+		  $exibeImg= "assets/frontend/img/servico/".$servico->imagem;
 	?>
 		  <div class="col-sm-3 container" style="overflow-y: auto;
           margin: auto 0.4%; min-width: 32.5%; height: 380px;
@@ -210,8 +210,8 @@
 		?>
 	    <div class="col-sm-4">
 			<?php
-				if($equipe->imagem == 1){
-					$mostraImg= "assets/frontend/img/pessoal/".md5($equipe->id).".jpg";
+				if($equipe->imagem != null){
+					$mostraImg= "assets/frontend/img/pessoal/".$equipe->imagem;
 				}
 				else {
 					$mostraImg= "assets/frontend/img/semAvatar.png";

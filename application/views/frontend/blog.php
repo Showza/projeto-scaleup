@@ -2,7 +2,7 @@
 	<a href="#" id="subir" style="text-decoration:none; color: #9aff01; z-index: 9999;"><i class="fas fa-arrow-circle-up fa-3x"></i></a>
 </div>
 <!-- Page Content -->
-<div class="container-fluid">
+<div style="background-image: url('assets/frontend/img/texture.png');">
     <!-- Blog Post -->
 	<div class="txt" style="margin:3em; margin-top: 0">
 	    <font face="monospace">

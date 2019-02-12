@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 08-Fev-2019 às 18:57
+-- Generation Time: 10-Fev-2019 às 19:05
 -- Versão do servidor: 10.1.37-MariaDB
 -- versão do PHP: 7.3.0
 
@@ -63,7 +63,7 @@ CREATE TABLE `pessoal` (
   `id` int(11) NOT NULL,
   `nome` varchar(150) NOT NULL,
   `cargo` varchar(150) NOT NULL,
-  `imagem` int(11) DEFAULT NULL
+  `imagem` longtext
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -71,12 +71,12 @@ CREATE TABLE `pessoal` (
 --
 
 INSERT INTO `pessoal` (`id`, `nome`, `cargo`, `imagem`) VALUES
-(1, 'gabriel', 'testador de bugs', 1),
-(2, 'bacon', 'mascote', 1),
-(5, 'testando', 'alo', 1),
-(6, 'membro', 'função', 1),
-(7, 'teste crud', 'alo', NULL),
-(8, 'alguem', 'teste', 1);
+(1, 'gabriel', 'testador de bugs', '1679091c5a880faf6fb5e6087eb1b2dc.jpg'),
+(2, 'bacon', 'mascote', 'c4ca4238a0b923820dcc509a6f75849b.jpg'),
+(5, 'testando', 'alo', 'c9f0f895fb98ab9159f51fd0297e236d.jpg'),
+(6, 'membro', 'função', 'c81e728d9d4c2f636f067f89cc14862c.jpg'),
+(7, 'teste crud', 'alo', 'e4da3b7fbbce2345d7772b0674a318d5.jpg'),
+(8, 'alguem', 'teste', '');
 
 -- --------------------------------------------------------
 
@@ -115,7 +115,7 @@ CREATE TABLE `servicos` (
   `id` int(11) NOT NULL,
   `nome` varchar(150) NOT NULL,
   `descricao` longtext NOT NULL,
-  `imagem` int(11) DEFAULT NULL
+  `imagem` longtext
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -123,9 +123,9 @@ CREATE TABLE `servicos` (
 --
 
 INSERT INTO `servicos` (`id`, `nome`, `descricao`, `imagem`) VALUES
-(1, 'teste', 'testando os serviços', 1),
-(2, 'bacon teste', 'Bacon ipsum dolor amet tongue hamburger shank jowl tenderloin, ham short loin swine pork belly. Kielbasa turducken short ribs, landjaeger pancetta venison corned beef tail. Chuck corned beef prosciutto pork loin jowl, frankfurter tongue shank bresaola. Beef ribs corned beef ground round ball tip. \r\n\r\nGround round porchetta strip steak chicken bresaola. Flank pork loin boudin fatback rump ham hock. Hamburger ham pig pork chop sausage short ribs rump spare ribs ground round picanha pancetta prosciutto tail shoulder frankfurter. Ribeye bacon sausage, alcatra pastrami pancetta boudin cupim. Turducken biltong short ribs leberkas meatball, chicken brisket landjaeger pork loin jowl. Brisket filet mignon ham hock andouille, rump tail ham bacon sirloin ribeye jerky swine beef ribs t-bone flank. Shankle ham leberkas, shoulder tail hamburger doner pancetta. \r\n\r\nMeatball pork belly corned beef, cow biltong porchetta filet mignon. Shoulder turkey swine, sausage venison pork cupim landjaeger short ribs kielbasa. Beef ribs sirloin cupim, filet mignon bresaola tri-tip cow pork short loin ham turducken turkey shoulder. Pig prosciutto boudin, strip steak corned beef sausage ham meatloaf tail kevin pork loin alcatra kielbasa porchetta leberkas. Hamburger chuck spare ribs ball tip turducken turkey bresaola sausage pastrami frankfurter fatback rump corned beef. Alcatra pork pork chop short loin shankle.', 1),
-(3, 'serv 3', 'Bacon ipsum', NULL);
+(1, 'teste', 'tesde asdasdadadadadad', 'teste.jpg'),
+(2, 'bacon teste', 'Bacon ipsum dolor amet tongue hamburger shank jowl tenderloin, ham short loin swine pork belly. Kielbasa turducken short ribs, landjaeger pancetta venison corned beef tail. Chuck corned beef prosciutto pork loin jowl, frankfurter tongue shank bresaola. Beef ribs corned beef ground round ball tip. \r\n\r\nGround round porchetta strip steak chicken bresaola. Flank pork loin boudin fatback rump ham hock. Hamburger ham pig pork chop sausage short ribs rump spare ribs ground round picanha pancetta prosciutto tail shoulder frankfurter. Ribeye bacon sausage, alcatra pastrami pancetta boudin cupim. Turducken biltong short ribs leberkas meatball, chicken brisket landjaeger pork loin jowl. Brisket filet mignon ham hock andouille, rump tail ham bacon sirloin ribeye jerky swine beef ribs t-bone flank. Shankle ham leberkas, shoulder tail hamburger doner pancetta. \r\n\r\nMeatball pork belly corned beef, cow biltong porchetta filet mignon. Shoulder turkey swine, sausage venison pork cupim landjaeger short ribs kielbasa. Beef ribs sirloin cupim, filet mignon bresaola tri-tip cow pork short loin ham turducken turkey shoulder. Pig prosciutto boudin, strip steak corned beef sausage ham meatloaf tail kevin pork loin alcatra kielbasa porchetta leberkas. Hamburger chuck spare ribs ball tip turducken turkey bresaola sausage pastrami frankfurter fatback rump corned beef. Alcatra pork pork chop short loin shankle.', 'c81e728d9d4c2f636f067f89cc14862c.jpg'),
+(30, 'teste crud', 'teste crud teste crud', NULL);
 
 -- --------------------------------------------------------
 
@@ -205,7 +205,7 @@ ALTER TABLE `login`
 -- AUTO_INCREMENT for table `pessoal`
 --
 ALTER TABLE `pessoal`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `postagem`
@@ -217,7 +217,7 @@ ALTER TABLE `postagem`
 -- AUTO_INCREMENT for table `servicos`
 --
 ALTER TABLE `servicos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
 
 --
 -- AUTO_INCREMENT for table `slider`
