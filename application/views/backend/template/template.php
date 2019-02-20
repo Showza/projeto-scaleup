@@ -17,7 +17,7 @@
             <div class="sidebar-nav navbar-collapse">
                 <ul class="nav" id="side-menu">
                     <li>
-                        <a href="<?php echo base_url('admin/slider') ?>"><i class="fa fa-slideshare fa-fw"></i> Slider</a>
+                        <a href="<?php echo base_url('admin/slider') ?>"><i class="fab fa-slideshare"></i> Slider</a>
                     </li>
                     <li>
                         <a href="<?php echo base_url('admin/postagens') ?>"><i class="fa fa-edit fa-fw"></i> Postagens</a>
@@ -32,7 +32,10 @@
                         <a href="<?php echo base_url('admin/contato') ?>"><i class="fa fa-at fa-fw"></i> Contato</a>
                     </li>
                     <li>
-                        <a href="<?php echo base_url('admin/usuario/logout') ?>"><i class="fa fa-sign-out fa-fw"></i> Sair do Sistema</a>
+                        <a href="<?php echo base_url() ?>"><i class="fas fa-exchange-alt"></i> Retornar ao Site</a>
+                    </li>
+                    <li>
+                        <a href="<?php echo base_url('admin/usuario/logout') ?>"><i class="fas fa-sign-out-alt"></i> Sair do Sistema</a>
                     </li>
                 </ul>
             </div>
