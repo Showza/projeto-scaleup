@@ -18,17 +18,25 @@
                         <div class="col-lg-12">
                             <?php
                                 echo validation_errors('<div class="alert alert-danger">','</div>');
-                                foreach($servicos as $servico){
-                                echo form_open('admin/servicos/salvar_alteracoes/'.md5($servico->id));
+                                foreach($publicacoes as $postagem){
+                                echo form_open('admin/postagens/salvar_alteracoes/'.md5($postagem->id));
 
                              ?>
                              <div class="form-group">
-                                 <label id="txt-nome">Nome</label>
-                                 <input id="txt-nome" name="txt-nome" type="text" class="form-control" placeholder="Digite o nome do serviço" value="<?php echo $servico->nome ?>">
+                                 <label id="txt-titulo">Título</label>
+                                 <input id="txt-titulo" name="txt-titulo" type="text" class="form-control" placeholder="Digite o título da postagem" value="<?php echo $postagem->titulo ?>">
                                  <br/>
-                                 <label id="txt-descricao">Descricao</label>
-                                 <textarea id="txt-descricao" name="txt-descricao" type="text" class="form-control" placeholder="Descreva o serviço" rows="10" maxlength="300"><?php echo $servico->descricao ?></textarea>
+                                 <label id="txt-subtitulo">Subtítulo</label>
+                                 <input id="txt-subtitulo" name="txt-subtitulo" type="text" class="form-control" placeholder="Subtítulo da postagem" value="<?php echo $postagem->subtitulo ?>">
                                  <br/>
+                                 <label id="txt-conteudo">Conteúdo</label>
+                                 <textarea id="txt-conteudo" name="txt-conteudo" type="text" class="form-control" placeholder="Link de redirecionamento" rows="10"><?php echo $postagem->conteudo ?></textarea>
+                                 <br/>
+                                 <label id="txt-autor">Autor</label>
+                                 <input id="txt-autor" name="txt-autor" type="text" class="form-control" placeholder="Nome do autor" value="<?php echo $postagem->autor ?>">
+                                 <br/>
+                                 <label id="txt-data">Data</label>
+                                 <input type="datetime-local"  id="txt-data"  name="txt-data" class="form-control" value="<?php echo strftime('%Y-%m-%dT%H:%M', strtotime($postagem->data)) ?>">
                              </div>
                              <button type="submit" class="btn btn-primary">Salvar Alterações</button>
                             <?php
@@ -62,13 +70,13 @@
                         </style>
                         <div class="col-lg-3 col-lg-offset-3">
                             <?php
-                                if($servico->imagem != null){
-                                    echo img("assets/frontend/img/servico/".$servico->imagem);
+                                if($postagem->imagem != null){
+                                    echo img("assets/frontend/img/publicacao/".$postagem->imagem);
                                 }
                                 else {
                                     echo img("assets/frontend/img/SemFoto.png");
                                 }
-                                echo form_open_multipart('admin/servicos/nova_foto/'.md5($servico->id).'/'.$servico->imagem);
+                                echo form_open_multipart('admin/postagens/nova_foto/'.md5($postagem->id).'/'.$postagem->imagem);
                             ?>
                         </div>
                     </div>

@@ -2,6 +2,7 @@
 <div id="voltarTopo">
 	<a href="#" id="subir" style="text-decoration:none; color: #9aff01; z-index: 9999;"><i class="fas fa-arrow-circle-up fa-3x"></i></a>
 </div>
+<div style="width:100%; margin-bottom: -1.5em; background-color: #ffffff; background-image: url('https://www.transparenttextures.com/patterns/gplay.png');">
 <div class="slideshow-container" id="home">
 
     <style>
@@ -253,7 +254,7 @@
 		}
 	}
 </style>
-<div class="container-fluid mej" style="overflow: auto; opacity: 0.5; filter: alpha(opacity=50);
+<div class="container-fluid mej" style="overflow: auto;
 -webkit-filter: grayscale(100%); filter: grayscale(100%); width: 100%;
 background-image: url('assets/frontend/img/mej.jpg'); background-size: 100% 100%;">
     <div class="container-fluid" style="text-align:center;  text-shadow: 3px 3px 8px #000000;">
@@ -277,4 +278,5 @@ background-image: url('assets/frontend/img/mej.jpg'); background-size: 100% 100%
         </font>
 		<br>
     </div>
+</div>
 </div>
