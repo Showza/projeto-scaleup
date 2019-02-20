@@ -32,7 +32,7 @@ class Servicos extends CI_Controller {
         $this->form_validation->set_rules('txt-nome','Nome',
             'required|min_length[3]');
         $this->form_validation->set_rules('txt-descricao','Descricao',
-            'required|min_length[10]');
+            'required|min_length[10]|max_length[300]');
         $this->form_validation->set_rules('txt-imagem','Imagem');
 
         if($this->form_validation->run() == FALSE){
@@ -80,7 +80,7 @@ class Servicos extends CI_Controller {
     {
         $this->load->library('form_validation');
         $this->form_validation->set_rules('txt-nome','Nome','required|min_length[3]');
-        $this->form_validation->set_rules('txt-descricao','Descricao','required|min_length[10]');
+        $this->form_validation->set_rules('txt-descricao','Descricao','required|min_length[10]|max_length[300]');
 
         if($this->form_validation->run() == FALSE){
             $this->alterar($id);
@@ -113,7 +113,7 @@ class Servicos extends CI_Controller {
 
     }
 
-    public function nova_foto($id, $imagem){
+    public function nova_foto($id, $imagem=null){
         /*Exclusão do arquivo antigo*/
         $this->load->helper('file');
 

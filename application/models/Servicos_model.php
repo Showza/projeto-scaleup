@@ -37,7 +37,7 @@ class Servicos_model extends CI_Model {
         $dados['nome'] = $nome;
         $dados['descricao'] = $descricao;
 
-        $this->db->where('id',$id);
+        $this->db->where('md5(id)',$id);
         return $this->db->update('servicos',$dados);
     }
 

@@ -2,7 +2,8 @@
 	<a href="#" id="subir" style="text-decoration:none; color: #9aff01; z-index: 9999;"><i class="fas fa-arrow-circle-up fa-3x"></i></a>
 </div>
 <!-- Page Content -->
-<div class="container-fluid" style="width: 50%; background-image: url('assets/frontend/img/texture.jgp');">
+<div style="width:100%; margin-bottom: -1.5em; border: outset; background-color: #ffffff; background-image: url('https://www.transparenttextures.com/patterns/gplay.png');">
+<div class="container-fluid" style="width: 50%;">
     <!-- Blog Post -->
     <font face="monospace" style="text-align:center;">
     <?php
@@ -18,8 +19,8 @@
     <br>
     </font>
     <?php
-    if($destaque->imagem == 1){
-        $fotopub= base_url("assets/frontend/img/publicacao/".md5($destaque->id).".jpg");
+    if($destaque->imagem != null){
+        $fotopub= base_url("assets/frontend/img/publicacao/".$destaque->imagem);
     ?>
     <img class="img-responsive" src="<?php echo $fotopub ?>" alt="" style="object-fit: cover;">
     <br>
@@ -30,9 +31,10 @@
     <p><?php echo $destaque->subtitulo ?></p>
     <br>
     <p style="text-align: justify;"><?php echo $destaque->conteudo ?></p>
-    <hr>
+    <br>
     </font>
     <?php
     }
     ?>
+</div>
 </div>
