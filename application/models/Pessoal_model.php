@@ -37,7 +37,7 @@ class Pessoal_model extends CI_Model {
         $dados['nome'] = $nome;
         $dados['cargo'] = $cargo;
 
-        $this->db->where('id',$id);
+        $this->db->where('md5(id)',$id);
         return $this->db->update('pessoal',$dados);
     }
 

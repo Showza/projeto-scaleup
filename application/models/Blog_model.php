@@ -48,34 +48,35 @@ class Blog_model extends CI_Model {
         return $this->db->get('postagem')->result();
     }
 
-    public function adicionar($titulo, $subtitulo, $conteudo, $autor, $datapub){
+    public function adicionar($titulo, $subtitulo, $conteudo, $autor, $datapub, $imagem){
         $dados['titulo']= $titulo;
         $dados['subtitulo']= $subtitulo;
         $dados['conteudo']= $conteudo;
         $dados['autor']= $autor;
         $dados['data']= $datapub;
+        $dados['imagem']= $imagem;
         return $this->db->insert('postagem', $dados);
     }
 
-    public function excluir($id){
+    public function remover($id){
         $this->db->where('md5(id)', $id);
         return $this->db->delete('postagem');
     }
 
-    public function alterar($titulo, $subtitulo, $conteudo, $autor, $datapub, $id){
+    public function alterar($id, $titulo, $subtitulo, $conteudo, $autor, $datapub){
         $dados['titulo']= $titulo;
         $dados['subtitulo']= $subtitulo;
         $dados['conteudo']= $conteudo;
         $dados['autor']= $autor;
         $dados['data']= $datapub;
-        $this->db->where('id', $id);
+        $this->db->where('md5(id)', $id);
         return $this->db->update('postagem', $dados);
     }
 
-    public function alterar_imagem($id){
-        $dados['imagem']= 1;
-        $this->db->where('md5(id)', $id);
-        return $this->db->update('postagem', $dados);
+    public function nova_foto($id, $imagem){
+    	$dados['imagem'] = $imagem;
+      	$this->db->where('md5(id)',$id);
+      	return $this->db->update('postagem',$dados);
     }
 
     public function contar(){
