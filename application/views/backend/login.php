@@ -19,6 +19,8 @@
                              </div>
                              <!-- Change this to a button or input when using this as a form -->
                              <button class="btn btn-lg btn-success btn-block">Entrar</button>
+                             <br>
+                                 <a href="<?php echo base_url() ?>"><i class="fas fa-long-arrow-alt-left"></i> Retornar ao Site</a>
                          </fieldset>
                      <?php
                         echo form_close();
