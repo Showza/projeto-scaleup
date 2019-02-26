@@ -5,14 +5,17 @@ class Postagem extends CI_Controller {
 
 	public function __construct(){
 		parent::__construct();
+
+		$this->load->model('contato_model','modelcontato');
 	}
 
-	public function index($id=null, $slug=null)
+	public function index($id=null, $slug=null, $enviado=null)
 	{
-        if ( !$id )
+        if (!$id)
         {
             redirect(base_url('blog'));;
         }
+
 		$this->load->model('blog_model', 'modelblog');
 		$dados['postagem'] = $this->modelblog->publicacao($id);
 
@@ -20,12 +23,13 @@ class Postagem extends CI_Controller {
 		$dados['titulo'] = 'Publicação';
 		$dados['subtitulo'] = '';
 		$dados['subtitulodb'] = $this->modelblog->listar_titulo($id);
+		$dados['enviado'] = $enviado;
 
 		$this->load->view('frontend/template/html-header', $dados);
 		$this->load->view('frontend/template/header');
 		$this->load->view('frontend/postagem');
+		$this->load->view('frontend/contato');
 		$this->load->view('frontend/template/footer');
 		$this->load->view('frontend/template/html-footer');
 	}
-
 }
