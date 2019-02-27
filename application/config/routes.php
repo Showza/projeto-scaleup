@@ -60,3 +60,4 @@ $route['admin/postagens/(:num)'] = 'admin/postagens/index/$1';
 $route['admin/login'] = 'admin/usuario/pag_login';
 $route['blog/(:num)'] = 'blog/index/$1';
 $route['postagem/(:num)/(:any)'] = 'postagem/index/$1/$2';
+$route['contato/(:num)'] = 'contato/index/$1'; //fale conosco

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 21-Fev-2019 às 13:10
+-- Generation Time: 26-Fev-2019 às 21:26
 -- Versão do servidor: 10.1.37-MariaDB
 -- versão do PHP: 7.3.0
 
@@ -33,6 +33,13 @@ CREATE TABLE `contato` (
   `nome` varchar(150) NOT NULL,
   `email` varchar(200) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Extraindo dados da tabela `contato`
+--
+
+INSERT INTO `contato` (`id`, `nome`, `email`) VALUES
+(0, 'bacon', 'bacon@teste.com');
 
 -- --------------------------------------------------------
 
