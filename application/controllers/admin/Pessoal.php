@@ -69,7 +69,7 @@ class Pessoal extends CI_Controller {
 	   $this->load->library('table');
 	   $dados['pessoal'] = $this->modelpessoal->listar_pessoal($id); // Traz os dados do model noticias_model.
 	   $dados['titulo']= 'Painel Administrativo';
-	   $dados['subtitulo'] = 'Serviços';
+	   $dados['subtitulo'] = 'Equipe';
 
 	   $this->load->view('backend/template/html-header', $dados);
 	   $this->load->view('backend/template/template');

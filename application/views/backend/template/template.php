@@ -32,9 +32,6 @@
                         <a href="<?php echo base_url('admin/contato') ?>"><i class="fa fa-at fa-fw"></i> Contato</a>
                     </li>
                     <li>
-                        <a href="<?php echo base_url() ?>"><i class="fas fa-exchange-alt"></i> Retornar ao Site</a>
-                    </li>
-                    <li>
                         <a href="<?php echo base_url('admin/usuario/logout') ?>"><i class="fas fa-sign-out-alt"></i> Sair do Sistema</a>
                     </li>
                 </ul>

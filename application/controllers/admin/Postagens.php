@@ -132,7 +132,7 @@ class Postagens extends CI_Controller {
 
    }
 
-   public function nova_foto($id, $imagem){
+   public function nova_foto($id, $imagem=null){
 	   /*Exclusão do arquivo antigo*/
 	   $this->load->helper('file');
 
