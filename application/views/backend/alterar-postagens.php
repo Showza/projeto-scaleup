@@ -87,7 +87,7 @@
                                 <input id="txt-imagem" name="txt-imagem" type="file" accept="application/png" placeholder="Matriz foto">
                                 <br/>
 
-                                <button type="submit" class="btn btn-primary">Salvar Alterações</button>
+                                <button type="submit" class="btn btn-primary">Enviar Imagem</button>
                            <?php
                                }
                                echo form_close();

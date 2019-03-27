@@ -41,7 +41,12 @@ class Contato extends CI_Controller {
 
 			$this->load->library('email');
 			$this->email->from($email, $nome);
-			$this->email->to("teste@teste.com");
+
+			if(isset($_POST["txt-email"])) {
+				$array_email = explode(", ",$_POST["txt-email"]; // separa os emails pelas vírgulas em uma array
+			}
+
+			$this->email->to($array_email);
 			$this->email->subject('Formulário de Contato - Scale Up');
 			$this->email->message(
 				"

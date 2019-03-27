@@ -31,13 +31,14 @@ class Slider_model extends CI_Model {
         $dados['titulo']= $titulo;
         $dados['subtitulo']= $subtitulo;
         $dados['link']= $link;
-        $this->db->where('id', $id);
+
+        $this->db->where('md5(id)', $id);
         return $this->db->update('slider', $dados);
     }
 
-    public function alterar_img($id){
-        $dados['imagem']= 1;
-        $this->db->where('md5(id)', $id);
-        return $this->db->update('slider', $dados);
+    public function nova_foto($id, $imagem){
+    	$dados['imagem'] = $imagem;
+      	$this->db->where('md5(id)',$id);
+      	return $this->db->update('slider',$dados);
     }
 }

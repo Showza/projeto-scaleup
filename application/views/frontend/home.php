@@ -25,7 +25,7 @@
 	  foreach($slider as $slides){
 	?>
 	<div class="mySlides fadeslide">
-		<img class="slideimg" src="<?php echo base_url('assets/frontend/img/slider/'.md5($slides->id).'.jpg') ?>" style="width:100%; height:850px;">
+		<img class="slideimg" src="<?php echo base_url('assets/frontend/img/slider/'.$slides->imagem) ?>" style="width:100%; height:850px;">
 		<font face="monospace"><div class="text"><b><?php echo $slides->titulo ?></b></div></font>
 		<font face="monospace"><div class="subtext">
 			<a href="<?php echo limpar($slides->link) ?>" style="text-decoration:none; color: inherit;">
