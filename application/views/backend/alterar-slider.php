@@ -50,11 +50,10 @@
             <!-- /.panel -->
         </div>
         <!-- /.col-lg-6 -->
-
         <div class="col-lg-6">
             <div class="panel panel-default">
                 <div class="panel-heading">
-                   <?php echo 'Imagem de destaque do '.$subtitulo ?>
+                   <?php echo 'Alterar Imagem' ?>
                 </div>
                 <div class="panel-body">
                     <div class="row" style= "padding-bottom: 10px;">
@@ -66,29 +65,33 @@
                                 width: 300px; /* Set a small width */
                             }
                         </style>
+                        </style>
                         <div class="col-lg-3 col-lg-offset-3">
-                            <?php echo img("assets/frontend/img/slider/".md5($slide->id).".jpg");?>
+                            <?php
+                                if($slide->imagem != null){
+                                    echo img("assets/frontend/img/slider/".$slide->imagem);
+                                }
+                                else {
+                                    echo img("assets/frontend/img/SemFoto.png");
+                                }
+                                echo form_open_multipart('admin/slider/nova_foto/'.md5($slide->id).'/'.$slide->imagem);
+                            ?>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-lg-12">
-                            <?php
-                                $divopen= '<div class="form-group">';
-                                $divclose= '</div>';
-                                echo form_open_multipart('admin/slider/nova_foto');
-                                echo form_hidden('id', md5($slide->id));
-                                echo $divopen;
-                                $imagem= array('name' => 'userfile', 'id' => 'userfile', 'class' => 'form-control');
-                                echo form_upload($imagem);
-                                echo $divclose;
-                                echo $divopen;
-                                $botao= array('name' => 'btn_adicionar', 'id' => 'btn_adicionar', 'class' => 'btn btn_default',
-                                    'value' => 'Adicionar nova Imagem');
-                                echo form_submit($botao);
-                                echo $divclose;
-                                echo form_close();
-                                }
+                            <div class="form-group">
+                                <br/>
+                                <input id="txt-imagem" name="txt-imagem" type="file" accept="application/png" placeholder="Matriz foto">
+                                <br/>
+
+                                <button type="submit" class="btn btn-primary">Enviar Imagem</button>
+                           <?php
+                               }
+                               echo form_close();
                             ?>
+                       </div>
+
                         </div>
 
                     </div>
