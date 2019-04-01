@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 26-Fev-2019 às 21:26
+-- Generation Time: 27-Mar-2019 às 20:38
 -- Versão do servidor: 10.1.37-MariaDB
 -- versão do PHP: 7.3.0
 
@@ -142,7 +142,7 @@ INSERT INTO `servicos` (`id`, `nome`, `descricao`, `imagem`) VALUES
 
 CREATE TABLE `slider` (
   `id` int(11) NOT NULL,
-  `imagem` int(11) NOT NULL,
+  `imagem` longtext NOT NULL,
   `titulo` varchar(150) DEFAULT NULL,
   `subtitulo` varchar(150) DEFAULT NULL,
   `link` longtext NOT NULL
@@ -153,10 +153,10 @@ CREATE TABLE `slider` (
 --
 
 INSERT INTO `slider` (`id`, `imagem`, `titulo`, `subtitulo`, `link`) VALUES
-(1, 1, 'União, Sinergia e Paixão.', 'Conheça nossa equipe.', '#equipe'),
-(2, 1, 'teste crud', 'clique aq e veja ', 'algum link qlqr'),
-(3, 1, 'titulo', 'subtitulo', '#home'),
-(4, 1, 'teste de erro', 'possivel erro', '#home');
+(1, 'c4ca4238a0b923820dcc509a6f75849b.jpg', 'União, Sinergia e Paixão.', 'Conheça nossa equipe.', '#equipe'),
+(2, 'c81e728d9d4c2f636f067f89cc14862c.jpg', 'teste crud', 'clique aq e veja ', 'algum link qlqr'),
+(3, 'eccbc87e4b5ce2fe28308fd9f2a7baf3.jpg', 'titulo', 'subtitulo', '#home'),
+(4, 'a87ff679a2f3e71d9181a67b7542122c.jpg', 'teste de erro', 'possivel erro', '#home');
 
 --
 -- Indexes for dumped tables
@@ -212,7 +212,7 @@ ALTER TABLE `login`
 -- AUTO_INCREMENT for table `pessoal`
 --
 ALTER TABLE `pessoal`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `postagem`

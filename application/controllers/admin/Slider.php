@@ -7,13 +7,15 @@ class Slider extends CI_Controller {
 		parent::__construct();
 		if(!$this->session->userdata('logado')){
 			redirect(base_url('admin/login'));
+
 		}
+
+		$this->load->model('slider_model', 'modelslider');
 	}
 
 	public function index()
 	{
 		$this->load->library('table');
-		$this->load->model('slider_model', 'modelslider');
 		$dados['slider']= $this->modelslider->mostrar_slides();
 
 		//Dados a serem enviados para o Cabeçalho
@@ -27,7 +29,8 @@ class Slider extends CI_Controller {
 	}
 
     public function alterar($id){
-		$this->load->model('slider_model', 'modelslider');
+
+		$this->load->library('table');
         $dados['slider'] = $this->modelslider->listar_slides($id);
 		//Dados a serem enviados para o Cabeçalho
 		$dados['titulo'] = 'Painel de Controle';
@@ -41,7 +44,6 @@ class Slider extends CI_Controller {
 
     public function salvar_alteracoes($id){
 
-		$this->load->model('slider_model', 'modelslider');
         $this->load->library('form_validation');
 		$this->form_validation->set_rules('txt-titulo','Título do Slider', 'required|min_length[3]');
 		$this->form_validation->set_rules('txt-subtitulo','Subtítulo', 'required|min_length[3]');
@@ -64,36 +66,43 @@ class Slider extends CI_Controller {
         }
     }
 
-    public function nova_foto(){
+	public function nova_foto($id, $imagem=null){
+ 	   /*Exclusão do arquivo antigo*/
+ 	   $this->load->helper('file');
 
-		$this->load->model('slider_model', 'modelslider');
+ 	   $caminhoArquivo = './assets/frontend/img/slider/'.$imagem;
 
-		$id= $this->input->post('id');
-		$config['upload_path']= './assets/frontend/img/slider';
-		$config['allowed_types']= 'jpg';
-		$config['file_name']= $id.".jpg";
-		$config['overwrite']= TRUE;
-		$this->load->library('upload', $config);
+ 	   $extensoes_permitidas = array('.png', '.jpeg', '.jpg');
+ 	   // Faz a verificação da extensão do arquivo enviado
+ 	   $extensao = strrchr($_FILES['txt-imagem']['name'], '.');
 
-		if(!$this->upload->do_upload()){
-			echo $this->upload->display_errors();
-		}
-		else {
-			$config2['source_image']= './assets/frontend/img/slider/'.$id.'.jpg';
-			$config2['create_tumb']= FALSE;
-			$this->load->library('image_lib', $config2);
-			if($this->image_lib->resize()){
-				if($this->modelslider->alterar_img($id)){
-	                redirect(base_url('admin/slider/alterar/'.$id));
-	            }
-	            else {
-	                echo "Houve um erro no sistema!";
-	            }
-			}
-			else {
-				echo $this->image_lib->display_errors();
-			}
-		}
+ 	   if(in_array($extensao, $extensoes_permitidas) == true)
+ 	   {
+ 		   if (!unlink($caminhoArquivo)){
+ 			   echo 'Não foi possível excluir o arquivo antigo';
+ 		   }
+ 		   $imagem = $_FILES['txt-imagem'];
+ 		   $original_name = $_FILES['txt-imagem']['name'];
+ 		   $new_name = strtr(utf8_decode($original_name), utf8_decode(' àáâãäçèéêëìíîïñòóôõöùúûüýÿÀÁÂÃÄÇÈÉÊËÌÍÎÏÑÒÓÔÕÖÙÚÛÜÝ()@#$!%¨&*?+="[]{}-<>;^~§º¬°¢£³²¹ª|'), '_aaaaaceeeeiiiinooooouuuuyyAAAAACEEEEIIIINOOOOOUUUUY___________________________________');;
+ 		   $configuracao['upload_path'] = './assets/frontend/img/slider';
+ 		   $configuracao['allowed_types'] = 'png|jpeg|jpg';
+ 		   $configuracao['file_name'] = $new_name;
+ 		   $configuracao['overwrite'] = TRUE;
+ 		   $this->load->library('upload', $configuracao);
+ 		   $this->upload->overwrite = true;
+ 		   $this->upload->initialize($configuracao);
+ 		   if($this->upload->do_upload('txt-imagem')){
+ 			   if($this->modelslider->nova_foto($id, $new_name)){
+ 				   redirect(base_url('admin/slider/alterar/'.$id));
+ 			   }
+ 		   }else{
+ 			   echo "Houve um erro no sistema!";
+ 			   echo $this->upload->display_errors();
+ 		   }
+ 	   }
+ 	   else{
+ 		   echo "Selecione apenas arquivos de imagem !";
+ 	   }
     }
 
 }
